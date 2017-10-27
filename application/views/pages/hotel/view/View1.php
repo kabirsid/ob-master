@@ -18,6 +18,7 @@
     padding: 0px ;
     position: relative;
 }
+
 #enquirypopup .modal-dialog:before {
     content: '';
     height: 0px;

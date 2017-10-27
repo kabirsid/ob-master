@@ -246,9 +246,7 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
                         <hr>  
                         
                 </div>
-            <div></div>
-            <div></div>
-
+            
                                          
 				<div class="col-md-12">
 				    <div role="tabpanel">

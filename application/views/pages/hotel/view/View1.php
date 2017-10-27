@@ -102,7 +102,7 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
     $Realestate = $this->db->query($query);
  ?>
 
-	<?php 
+    <?php 
     $pathArray = array();
     foreach ($HotelView as $ViewRow) {
         $id = $ViewRow['hotelid'];
@@ -228,9 +228,9 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
                 </div>
         </div>        
         
-        	<div class="col-md-8">
-				<div class="col-md-12" style="text-align: left;">
-					<div class="jumbotron" style="margin-left:-20px;background-color: #d2f3f7;">
+            <div class="col-md-8">
+                <div class="col-md-12" style="text-align: left;">
+                    <div class="jumbotron" style="margin-left:-20px;background-color: #d2f3f7;">
                     </br>
                         <h3 style="margin-top: -40px;">Description :</h3>
                             <p style="font-size: 16px;">
@@ -247,8 +247,8 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
                         
                 </div>
                                     
-				<div class="col-md-12">
-				    <div role="tabpanel">
+                <div class="col-md-12">
+                    <div role="tabpanel">
                         <ul class="product-tab" role="tablist">
                             
                             <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Services</a></li>
@@ -345,9 +345,9 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
         </div>
         
       
-				
-	<div class="col-md-2">
-		<div role="tabpanel">
+                
+    <div class="col-md-2">
+        <div role="tabpanel">
             <ul class="product-tab" role="tablist">
                 <li role="presentation class="active"><a href="#" aria-controls="" role="tab" data-toggle="tab" style="background-color:#5a88ca;">Reviews</a></li>
             </ul>
@@ -435,11 +435,11 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
     
     <!-- Main Script -->
     <script src="js/main.js"></script>
-	
-	<!-- Slider -->
+    
+    <!-- Slider -->
     <script type="text/javascript" src="<?php echo base_url();?>assets/js/bxslider.min.js"></script>
-	<script type="text/javascript" src="<?php echo base_url();?>assets/js/script.slider.js"></script>
-	
+    <script type="text/javascript" src="<?php echo base_url();?>assets/js/script.slider.js"></script>
+    
   
 </body>
 </html>

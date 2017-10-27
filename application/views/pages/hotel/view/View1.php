@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <head>
-
+<!--
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/bootstrap/css/bootstrap.min.css">
 <script type="text/javascript" src="<?php echo base_url();?>assets/js/jquery-1.11.1.min.js"></script>
+-->
 
 <style type="text/css">
     
@@ -147,8 +148,8 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
             </div>
             <div class="col-md-10">
             
-                <div class="product-bit-title text-center" style="text-decoration-color: #DF4CDF;">
-                        <h2 style="margin-left: -10px;"><?php echo $title;?></h2>
+                <div class="product-bit-title text-center">
+                        <h2><?php echo $title;?></h2>
                 </div>
            
         </div>
@@ -157,6 +158,17 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
     </div>
 </div>
 
+<!--<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="product-big-title-area">
+                <div class="product-bit-title text-center">
+                        <h2><marquee><?php echo $title;?></marquee></h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>-->
 
 <div class="container">
     <div class="row">
@@ -182,13 +194,12 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
     <div class="container">
         <div class="row">
             <div class="col-md-2">
-                  <div class="jumbotron">
-
-            <h4 style="margin-top:-30px;">Hotels:</h4>
+            <div class="jumbotron">
+            <h4 style="margin-top: -25px;">Hotels:</h4>
                     <?php foreach ($Realestate->result_array() as $RealestateRow) {
                     ?>
                         <ul class="list-group">
-                            <li  style="padding-bottom:0px;">
+                            <li style="padding-bottom:0px;">
                                 <h4>
                                     <a href="<?php echo base_url();?>index.php/Hotel/view/<?php echo $RealestateRow['hotelid'];?>">
                                         <?php
@@ -211,34 +222,29 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
                             <?php } ?>
                           <a href="<?php echo base_url();?>index.php/Hotel"><h4>More-Hotels</h4></a>
                         </div>
+                        </div>
                 </div>
-            </div>
-               
                 </div>
-                
+                </div>
+        </div>        
         
-
-            
-
-            
-			
-            <div class="col-md-8">
-				<div class="col-md-12" style="text-align: left;margin: -20px;">
+        	<div class="col-md-8">
+				<div class="col-md-12" style="text-align: left;">
+					<div class="jumbotron" style="margin-left:-20px;background-color: #d2f3f7;">
                     </br>
-                      <div class="jumbotron" style="background:#d2f3f7;">
-
-                        <h3>Description</h3>
-                            <p>
+                        <h3 style="margin-top: -40px;">Description :</h3>
+                            <p style="font-size: 16px;">
                                 <?php echo $description; ?>
                             </p>
                                 <?php if($amenities!=null){?>
-                        <h3>Facilities</h3>
-                            <p>
+                        <h3>Facilities :</h3>
+                            <p style="font-size: 16px;">
                                 <?php echo $amenities; ?>
                             </p>
-                                <?php }?>
-                                </div> 
+                                <?php }?> 
+                                </div>
                         <hr>  
+                        
                 </div>
             
 
@@ -247,7 +253,7 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
 				    <div role="tabpanel">
                         <ul class="product-tab" role="tablist">
                             
-                            <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Service</a></li>
+                            <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Services</a></li>
                             <li role="presentation"><a href="#menu" aria-controls="menu" role="tab" data-toggle="tab">Menu</a></li>
                             <li role="presentation"><a href="#gallery" aria-controls="gallery" role="tab" data-toggle="tab">Gallery</a></li>
                             <li role="presentation"><a href="#address" aria-controls="address" role="tab" data-toggle="tab">Address</a></li>
@@ -255,10 +261,9 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
                     </div>
                     <div class="tab-content">
                         <div role="tabpanel" class="tab-pane fade " id="address">
-                              <div class="jumbotron">
-
+                        <div class="jumbotron">
                             <h3>Posted by : <span class="post_title"><?php echo $name;?></span></h3>
-                                <p>
+                                <p style="font-size: 16px;">
                                     <span class="violet"> Address: </span><?php echo ucfirst(strtolower($area)).', ';?><?php echo ucfirst(strtolower($city));?><br>
                                     <?php echo $address;?><br>
                                     <?php if($price!=null){?>
@@ -269,23 +274,18 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
                                     <hr>
                                     <strong>Posted at: </strong><?php echo $postdate;?>
                                 </p>
-                            </div>
+                                </div>
                         </div>
                     <div role="tabpanel" class="tab-pane fade in active" id="home">
                     <div class="row">
-                          <div class="jumbotron">
-
+                    <div class="jumbotron" style="font-size: 16px;">
                         <?php 
                                 echo $services;
                                        // $b=explode(",",$services);
                                        // echo $b;
-
-                                echo $description; 
-                            
-                            
                                     ?>
                                     </div>
-                                </div>
+                                    </div>
                     </div>
                                    
                                             
@@ -328,42 +328,19 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
 
                     <div role="tabpanel" class="tab-pane fade" id="gallery">
                         <div class="col-sm-12" id="Div4">
-                             
-                            <ul class="hide-bullets">
-                                <li class="col-sm-3">
-                                    <a class="thumbnail" id="A1">
-                                        <img style="height:148px;" src="<?php echo base_url();?><?php echo $path?>">
-                                    </a>
-                                </li>
-                                
-                            </ul>
+                        <form action="#" methode="post" ectype="multipart/form-data">
+                        <div class="portfolio-box web-design">
+                                <img style="height:148px; width: 230px;" src="<?php echo base_url();?><?php echo $path?>">
+                            </div>
+                            </form>
                         </div>
-                        
                     </div>
-
-
-
-
-
-
-
-
-
-
-
-
                     <div role="tabpanel" class="tab-pane fade " id="menu"> 
-                          <div class="jumbotron">
-
-                        <p>
-                              <h4><strong> <?php echo $offersmenu; ?></strong></span></h4>
-                            </p>
-                        </div>
-
-                            
-
-                            
-                           
+                        <div class="col-sm-12">
+                        <div class="jumbotron" style="font-size: 16px;">
+                            <h4><strong> <?php echo $offersmenu; ?></strong></span></h4>
+                            </div>
+                        </div>  
                     </div>
                 </div>
             </div>

@@ -279,6 +279,10 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
                                 echo $services;
                                        // $b=explode(",",$services);
                                        // echo $b;
+
+                                echo $description; 
+                            
+                            
                                     ?>
                                     </div>
                                 </div>

@@ -1,6 +1,6 @@
  <?php 
-$query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.hotelid GROUP BY hotel.hotelid ORDER BY RAND() LIMIT 4";			
-	$Realestate = $this->db->query($query);
+$query1 = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.hotelid GROUP BY hotel.hotelid ORDER BY RAND() LIMIT 4";			
+	$Realestate = $this->db->query($query1);
  ?>
  <div class="services-container">
 	        <div class="container">

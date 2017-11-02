@@ -78,7 +78,9 @@
     width: 100%;
     vertical-align: middle;
 }
-
+.panel-body {
+    padding-bottom: 00px;
+}
 
 
 </style>
@@ -174,19 +176,41 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <div class="thumbnail text-left" style="padding:0px;">
-                <img style="opacity:0.9;height:60%;width:100%;" src="<?php echo base_url();?><?php echo $path?>" alt="<?php echo $path;?>"> 
-            </div>
-            <div class="caption">
-                <p class="textcent">
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fa fa-map-marker" style="font-size:30px;" aria-hidden="true"></i>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fa fa-mobile" style="font-size:30px;" aria-hidden="true"></i>
-                        <?php echo $mobile;?>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fa fa-envelope" style="font-size:30px;" aria-hidden="true"></i>
-                        <?php echo $email;?>
-                </p>
+            <div class="panel-body">
+              <div class="col-sm-4" style="padding-bottom: 00px;margin-bottom: 00px;">  
+            <div class="thumbnail text-left" style="padding:0px; margin-bottom: 00px;">
+                <img style="opacity:0.9;height:30%;width:100%;" src="<?php echo base_url();?><?php echo $path?>" alt="<?php echo $path;?>"> 
             </div>
         </div>
+         <h3>Posted by : <span class="post_title"><?php echo $name;?></span></h3>
+            <p style="font-size: 16px;">
+                <div class="col-sm-1">
+                <span class="violet" style="text-align: center;font-size: 18px;"> Address: </span></div>
+              <div class="col-sm-4">  <span style="font-size: 16px; text-align: right;"><?php echo ucfirst(strtolower($area)).', ';?><?php echo ucfirst(strtolower($city));?><br>
+                <?php echo $address;?><br>
+                <?php if($price!=null){?>
+               <!-- <span class="violet">Price: </span><?php echo $price;?><br>
+                <?php }?>
+                <span class="violet">Mobile: </span><?php echo $mobile;?><br>
+                <span class="violet">Email ID: </span><?php echo $email;?><br>
+                <hr>
+                <strong>Posted at: </strong><?php echo $postdate;?>-->
+            </p></span></div>
+    </div>
+    <div class="panel-footer" style="background-color: #808080; margin-left: 28px; padding: 5px 5px;">
+        
+                <p class="textcent">
+                   &nbsp;  &nbsp;  &nbsp;   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fa fa-map-marker" style="font-size:30px;" aria-hidden="true"></i>
+                      &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fa fa-mobile" style="font-size:30px;" aria-hidden="true"></i>
+                        <?php echo $mobile;?>
+                    &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fa fa-envelope" style="font-size:30px;" aria-hidden="true"></i>
+                        <?php echo $email;?>
+                </p>
+    </div>
+
+          
+
+       </div> </div>
     </div>
 </div>
 
@@ -221,7 +245,7 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
                         </ul>
                         <div>
                             <?php } ?>
-                          <a href="<?php echo base_url();?>index.php/Hotel"><h4>More-Hotels</h4></a>
+                          <a href="<?php echo base_url();?>index.php/Hotel"><h4>More...</h4></a>
                         </div>
                         </div>
                 </div>
@@ -255,7 +279,7 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
                             <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Services</a></li>
                             <li role="presentation"><a href="#menu" aria-controls="menu" role="tab" data-toggle="tab">Menu</a></li>
                             <li role="presentation"><a href="#gallery" aria-controls="gallery" role="tab" data-toggle="tab">Gallery</a></li>
-                            <li role="presentation"><a href="#address" aria-controls="address" role="tab" data-toggle="tab">Address</a></li>
+                      <li role="presentation"><a href="#address" aria-controls="address" role="tab" data-toggle="tab">Address</a></li>
                         </ul>
                     </div>
                     <div class="tab-content">

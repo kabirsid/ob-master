@@ -8,8 +8,8 @@
 	
 	$this->load->view('layout/Latestposts');
 	//$this->load->view('layout/Realestate');
-	$this->load->view('layout/Tuition');
-	$this->load->view('layout/Hotel');
+	//$this->load->view('layout/Tuition');
+	//$this->load->view('layout/Hotel');
 	//$this->load->view('layout/Travelling');
 	//$this->load->view('layout/Automobile');
 	//$this->load->view('layout/Other');

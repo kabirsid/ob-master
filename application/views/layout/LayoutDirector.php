@@ -3,12 +3,12 @@
 ?>
 	<body>
 <?php
-//	$this->load->view('layout/Nav');
+$this->load->view('layout/Nav');
 	$this->load->view('layout/SliderTwo');
 	
 	$this->load->view('layout/Latestposts');
 	//$this->load->view('layout/Realestate');
-		$this->load->view('layout/Hotel');
+		$this->load->view('layout/hotel2');
 	$this->load->view('layout/Tuition');
 
 	//$this->load->view('layout/Travelling');

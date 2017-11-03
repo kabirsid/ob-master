@@ -1,5 +1,5 @@
  <!-- Slider 2 -->
-        <div class="slider-2-container" style="height: 30%;margin-top: 100px;">
+        <div class="slider-2-container" style="height: 40%;margin-top: 0px;">
             <div class="container" style="">
                 <div class="row">
                <!--    <div class="col-sm-8 col-sm-offset-2 slider-2-text wow fadeInUp">-->

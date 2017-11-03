@@ -12,7 +12,7 @@ body {
     text-align: center;
     font-family: 'Times New Roman', sans-serif;
     color: #888;
-    font-size: 20px;
+    font-size: 11px;
 }
 .category{
     margin-top: 10px;
@@ -182,7 +182,7 @@ ul.navbar-nav {
 	color: #888;
 }
 
-ul.navbar-nav li a { padding: 23px 20px; background: #fff; border-top: 5px solid #fff; color: #5d5d5d; }
+ul.navbar-nav li a { padding: 20px 20px; color: #5d5d5d; }
 ul.navbar-nav li.active a { background: #f8f8f8; border-color: #000000; color: #5d5d5d; }
 
 ul.navbar-nav li a:hover, ul.navbar-nav li a:focus { background: #ff4c4c; border-color: #000000; color: #fff; outline: 0; }
@@ -1143,4 +1143,48 @@ padding:5px 0;
 .stylish-input-group button{
     border:0;
     background:transparent;
-} *
+} 
+
+/********************************************************************************************************
+Navbar
+*********************************************************************************************************/
+
+
+/***********************************************************************
+*  OPAQUE NAVBAR SECTION
+***********************************************************************/
+.opaque-navbar {
+    background-color: rgba(0,0,0,0.5);
+  /* Transparent = rgba(0,0,0,0) / Translucent = (0,0,0,0.5)  */
+    height: 60px;
+    border-bottom: 0px;
+    transition: background-color .5s ease 0s;
+}
+
+.opaque-navbar.opaque {
+    background-color: black;
+    height: 60px;
+    transition: background-color .5s ease 0s;
+}
+
+ul.dropdown-menu {
+   /* background-color: black;*/
+}
+
+
+@media (max-width: 992px) {
+  body
+  {
+    background:red;
+  }
+  .opaque-navbar {
+    background-color: black;
+    height: 60px;
+    transition: background-color .5s ease 0s;
+}
+
+}
+
+
+
+

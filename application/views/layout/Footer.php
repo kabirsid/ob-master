@@ -33,10 +33,10 @@
                     <div class="footer-menu">
                         <h2 class="footer-wid-title">Our Team</h2>
                         <ul>
-                            <li><a href="#">Dheeraj Magar</a></li>
-                            <li><a href="#">Harshad Patil</a></li>
+                            <li><a href="#">OffersBull Team</a></li>
+                            <!--<li><a href="#">Harshad Patil</a></li>
                             <li><a href="#">Vinayak Done</a></li>
-                            <li><a href="#">Swarup Yadav</a></li>
+                            <li><a href="#">Swarup Yadav</a></li>-->
                             
                             
                         </ul>                        

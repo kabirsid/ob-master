@@ -130,7 +130,7 @@
 							</a>	
 						<?php }?>	
 							<a href="<?php echo base_url();?>index.php/info/feedback">
-							<button class="navbar_btn" id="Button4" style="margin-right: -40px;">
+							<button class="navbar_btn" id="Button4" >
 								<i class="fa fa-question-circle"></i> Help
 							</button>
 							</a>

@@ -193,8 +193,8 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
         </div>
          <h3>Posted by : <span class="post_title"><?php echo $name;?></span></h3>
             <p style="font-size: 16px;">
-                <div class="col-sm-1">
-                <span class="violet" style="text-align: center;font-size: 18px;"> Address: </span></div>
+               <!-- <div class="col-sm-1"> 
+               <span class="violet" style="text-align: center;font-size: 18px;"> Address: </span></div>-->
               <div class="col-sm-4">  <span style="font-size: 16px; text-align: right;"><?php echo ucfirst(strtolower($area)).', ';?><?php echo ucfirst(strtolower($city));?><br>
                 <?php echo $address;?><br>
                 <?php if($price!=null){?>
@@ -205,21 +205,7 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
                 <hr>
                 <strong>Posted at: </strong><?php echo $postdate;?>-->
             </p></span></div>
-              <div class="container">
-    <div class="row">
-        <h2>Working Star Ratings for Bootstrap 3 <small>Hover and click on a star</small></h2>
-    </div>
-    <div class="row lead">
-        <div id="stars" class="starrr"></div>
-        You gave a rating of <span id="count">0</span> star(s)
-    </div>
-    
-    <div class="row lead">
-        <p>Also you can give a default rating by adding attribute data-rating</p>
-        <div id="stars-existing" class="starrr" data-rating='4'></div>
-        You gave a rating of <span id="count-existing">4</span> star(s)
-    </div>
-</div>
+          
    
     </div>
     <div class="panel-footer" style="background-color: #808080; margin-left: 0px; margin-bottom: 0px; padding: 5px 5px;">

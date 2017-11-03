@@ -24,7 +24,7 @@ body {
     text-align: left;
     color: #8bc34a;
 }
-.navbar_btn{
+/*.navbar_btn{
     background-color: red;
     border: none;
     color: white;
@@ -36,11 +36,11 @@ body {
     font-size: 12px;
 }.navbar_btn:hover{
     background-color: #ffc107;
-}
+}*/
 .violet { color: #ff4c4c; }
-#navbar_btn_black{
+/*#navbar_btn_black{
     color: black;
-}
+}8?
 #info{
     font-size: 60px;
 }
@@ -170,12 +170,12 @@ a.big-link-3:active {
     background-color: #7d6642;
     color: white;
 }
-.navbar {
+/*.navbar {
 	margin-bottom: 0;
 	background: #fff;
 	border: 0;
 	-moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0;
-}
+}*/
 
 ul.navbar-nav {
 	font-size: 14px;
@@ -211,14 +211,14 @@ ul.navbar-nav li.active .dropdown-menu > .active > a { background: #f8f8f8; colo
 ul.navbar-nav li.active .dropdown-menu > .active > a:hover, 
 ul.navbar-nav li.active .dropdown-menu > .active > a:focus { background: #9d426b; color: #fff; border: 0; }
 
-.navbar>.container .navbar-brand { margin-left: 0; }
+/*.navbar>.container .navbar-brand { margin-left: 0; }
 
 .navbar-brand {
 	width: 148px;
 	height: 85px;
 	background: url(../img/logo.png) left center no-repeat;
 	text-indent: -99999px;
-}
+}*/
 
 /***** Slider *****/
 

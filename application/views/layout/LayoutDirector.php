@@ -3,7 +3,7 @@
 ?>
 	<body>
 <?php
-	$this->load->view('layout/Nav');
+//	$this->load->view('layout/Nav');
 	$this->load->view('layout/SliderTwo');
 	
 	$this->load->view('layout/Latestposts');

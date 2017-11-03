@@ -81,7 +81,14 @@
 .panel-body {
     padding-bottom: 00px;
 }
+.star-rating {
+  line-height:32px;
+  font-size:1.25em;
+}
 
+.star-rating .fa-star{color: yellow;}
+#hearts { color: #ee8b2d;}
+#hearts-existing { color: #ee8b2d;}
 
 </style>
 <script type="text/javascript">
@@ -91,10 +98,10 @@
         }, 3000);
             });
 
-        
+     
 </script>
 </head>
-<body>
+<body style="background-color: #ededed;">
 
 
 
@@ -142,7 +149,7 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
     }
  ?>    
 
-<div class="page-title-container">
+<div class="page-title-container" style="background-color: grey;">
     <div class="container">
         <div class="row">
             <div class="col-md-2">
@@ -173,11 +180,13 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
     </div>
 </div>-->
 
-<div class="container">
+<div class="container" style="margin-left: 70px;">
     <div class="row">
         <div class="col-md-12">
-            <div class="panel-body">
+           <div class="jumbotron"  style="margin-left:-20px;background-color: #ffffff; padding-left: 0px;padding-bottom: 0px; padding-right: 0px; padding-top: 0px;">
+            <div class="panel-body" >
               <div class="col-sm-4" style="padding-bottom: 00px;margin-bottom: 00px;">  
+
             <div class="thumbnail text-left" style="padding:0px; margin-bottom: 00px;">
                 <img style="opacity:0.9;height:30%;width:100%;" src="<?php echo base_url();?><?php echo $path?>" alt="<?php echo $path;?>"> 
             </div>
@@ -196,8 +205,24 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
                 <hr>
                 <strong>Posted at: </strong><?php echo $postdate;?>-->
             </p></span></div>
+              <div class="container">
+    <div class="row">
+        <h2>Working Star Ratings for Bootstrap 3 <small>Hover and click on a star</small></h2>
     </div>
-    <div class="panel-footer" style="background-color: #808080; margin-left: 28px; padding: 5px 5px;">
+    <div class="row lead">
+        <div id="stars" class="starrr"></div>
+        You gave a rating of <span id="count">0</span> star(s)
+    </div>
+    
+    <div class="row lead">
+        <p>Also you can give a default rating by adding attribute data-rating</p>
+        <div id="stars-existing" class="starrr" data-rating='4'></div>
+        You gave a rating of <span id="count-existing">4</span> star(s)
+    </div>
+</div>
+   
+    </div>
+    <div class="panel-footer" style="background-color: #808080; margin-left: 0px; margin-bottom: 0px; padding: 5px 5px;">
         
                 <p class="textcent">
                    &nbsp;  &nbsp;  &nbsp;   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fa fa-map-marker" style="font-size:30px;" aria-hidden="true"></i>
@@ -205,12 +230,18 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
                         <?php echo $mobile;?>
                     &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fa fa-envelope" style="font-size:30px;" aria-hidden="true"></i>
                         <?php echo $email;?>
+
+  
+    
+  
                 </p>
     </div>
 
           
-
-       </div> </div>
+</p>
+</div>
+       </div> 
+   </div>
     </div>
 </div>
 
@@ -219,7 +250,7 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
     <div class="container">
         <div class="row">
             <div class="col-md-2">
-            <div class="jumbotron">
+            <div class="jumbotron" style="background-color: white; border: red;">
             <h4 style="margin-top: -25px;">Hotels:</h4>
                     <?php foreach ($Realestate->result_array() as $RealestateRow) {
                     ?>
@@ -249,15 +280,15 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
                         </div>
                         </div>
                 </div>
-                
-            
+                </div>
+           </div> 
         </div>        
         
             <div class="col-md-8">
                 <div class="col-md-12" style="text-align: left;">
-                    <div class="jumbotron" style="margin-left:-20px;background-color: #d2f3f7;">
+                    <div class="jumbotron" style="margin-left:-20px;background-color: #ffffff;">
                     </br>
-                        <h3 style="margin-top: -40px;">Description :</h3>
+                        <h3 style="margin-top: -40px; font-family: ">Description :</h3>
                             <p style="font-size: 16px;">
                                 <?php echo $description; ?>
                             </p>
@@ -362,6 +393,26 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
                         <div class="col-sm-12">
                         <div class="jumbotron" style="font-size: 16px;">
                             <h4><strong> <?php echo $offersmenu; ?></strong></span></h4>
+                            <div class="container">
+    <div class="row">
+        <h2>Working Star Ratings for Bootstrap 3 <small>Hover and click on a star</small></h2>
+    </div>
+    <div class="row lead">
+        <div id="hearts" class="starrr"></div>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+        You gave a rating of <span id="count">0</span> star(s)
+    </div>
+    
+    <div class="row lead">
+        <p>Also you can give a default rating by adding attribute data-rating</p>
+        <div id="hearts-existing" class="starrr" data-rating='4'></div>
+        You gave a rating of <span id="count-existing">4</span> star(s)
+    </div>
+</div>
                             </div>
                         </div>  
                     </div>
@@ -383,6 +434,7 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
                             <p><label for="name">Name</label> <input name="name" type="text"></p>
                             <p><label for="email">Email</label> <input name="email" type="email"></p>
                                 <div class="rating-chooser">
+
                                     <p>Your rating</p>
                                         <div class="rating-wrap-post">
                                             <i class="fa fa-star"></i>
@@ -391,6 +443,7 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
                                         </div>
+                                           <div id="stars" class="starrr"></div>
                                 </div>
                                 <p><label for="review">Your review</label> <textarea name="review" id="" cols="30" rows="10"></textarea></p>
                                 <p><input type="submit" value="Submit"></p>
@@ -444,7 +497,124 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
   
 -->
 
-   
+   <script type="text/javascript">
+       // Starrr plugin (https://github.com/dobtco/starrr)
+// Starrr plugin (https://github.com/dobtco/starrr)
+var __slice = [].slice;
+
+(function($, window) {
+  var Starrr;
+
+  Starrr = (function() {
+    Starrr.prototype.defaults = {
+      rating: void 0,
+      numStars: 5,
+      change: function(e, value) {}
+    };
+
+    function Starrr($el, options) {
+      var i, _, _ref,
+        _this = this;
+
+      this.options = $.extend({}, this.defaults, options);
+      this.$el = $el;
+      _ref = this.defaults;
+      for (i in _ref) {
+        _ = _ref[i];
+        if (this.$el.data(i) != null) {
+          this.options[i] = this.$el.data(i);
+        }
+      }
+      this.createStars();
+      this.syncRating();
+      this.$el.on('mouseover.starrr', 'span', function(e) {
+        return _this.syncRating(_this.$el.find('span').index(e.currentTarget) + 1);
+      });
+      this.$el.on('mouseout.starrr', function() {
+        return _this.syncRating();
+      });
+      this.$el.on('click.starrr', 'span', function(e) {
+        return _this.setRating(_this.$el.find('span').index(e.currentTarget) + 1);
+      });
+      this.$el.on('starrr:change', this.options.change);
+    }
+
+    Starrr.prototype.createStars = function() {
+      var _i, _ref, _results;
+
+      _results = [];
+      for (_i = 1, _ref = this.options.numStars; 1 <= _ref ? _i <= _ref : _i >= _ref; 1 <= _ref ? _i++ : _i--) {
+        _results.push(this.$el.append("<span class='glyphicon .glyphicon-star-empty'></span>"));
+      }
+      return _results;
+    };
+
+    Starrr.prototype.setRating = function(rating) {
+      if (this.options.rating === rating) {
+        rating = void 0;
+      }
+      this.options.rating = rating;
+      this.syncRating();
+      return this.$el.trigger('starrr:change', rating);
+    };
+
+    Starrr.prototype.syncRating = function(rating) {
+      var i, _i, _j, _ref;
+
+      rating || (rating = this.options.rating);
+      if (rating) {
+        for (i = _i = 0, _ref = rating - 1; 0 <= _ref ? _i <= _ref : _i >= _ref; i = 0 <= _ref ? ++_i : --_i) {
+          this.$el.find('span').eq(i).removeClass('glyphicon-star-empty').addClass('glyphicon-star');
+        }
+      }
+      if (rating && rating < 5) {
+        for (i = _j = rating; rating <= 4 ? _j <= 4 : _j >= 4; i = rating <= 4 ? ++_j : --_j) {
+          this.$el.find('span').eq(i).removeClass('glyphicon-star').addClass('glyphicon-star-empty');
+        }
+      }
+      if (!rating) {
+        return this.$el.find('span').removeClass('glyphicon-star').addClass('glyphicon-star-empty');
+      }
+    };
+
+    return Starrr;
+
+  })();
+  return $.fn.extend({
+    starrr: function() {
+      var args, option;
+
+      option = arguments[0], args = 2 <= arguments.length ? __slice.call(arguments, 1) : [];
+      return this.each(function() {
+        var data;
+
+        data = $(this).data('star-rating');
+        if (!data) {
+          $(this).data('star-rating', (data = new Starrr($(this), option)));
+        }
+        if (typeof option === 'string') {
+          return data[option].apply(data, args);
+        }
+      });
+    }
+  });
+})(window.jQuery, window);
+
+$(function() {
+  return $(".starrr").starrr();
+});
+
+$( document ).ready(function() {
+      
+  $('#hearts').on('starrr:change', function(e, value){
+    $('#count').html(value);
+  });
+  
+  $('#hearts-existing').on('starrr:change', function(e, value){
+    $('#count-existing').html(value);
+  });
+});
+   </script>
     <!-- Latest jQuery form server -->
     <script src="https://code.jquery.com/jquery.min.js"></script>
     

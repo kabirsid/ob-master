@@ -265,15 +265,17 @@ $query1 = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img
 	            	?>
 			      	<div class="col-xs-12 col-sm-3">
 		               <div class="single-product">
+                                
+                               <div class="panel-body">
                                 <div class="product-f-image">
-	                    <img id="postimg" src="<?php echo $RealestateRow['path'];?>" alt="<?php echo $RealestateRow['title'];?>">
+	              <img id="postimg" src="<?php echo $RealestateRow['path'];?>" alt="<?php echo $RealestateRow['title'];?>">
 			                	<div class="product-hover">
                                        
                                         <a href="<?php echo base_url();?>index.php/Hotel/view/<?php echo $RealestateRow['hotelid'];?>" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                                     </div>
                                      </div>
 
-			                	
+			                	</div>
 			                		<h2> <a href="<?php echo base_url();?>index.php/Hotel/view/<?php echo $RealestateRow['hotelid'];?>">
 			                			<?php
 			                			$title = $RealestateRow['title'];
@@ -287,7 +289,7 @@ $query1 = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img
 			                			?>
 			                		</a></h2>
 			                	</div>
-		               <p>Address : <?php echo $RealestateRow['area'].' ,'.$RealestateRow['city'];?></p>
+		               <p>Address : <?php echo $RealestateRow['description'].' ,'.$RealestateRow['city'];?></p>
 		                </a>
 					</div>
 					<?php } ?>

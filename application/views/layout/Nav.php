@@ -1,4 +1,4 @@
-<nav class="navbar  navbar-fixed-top" role="navigation">
+<!--<nav class="navbar  navbar-fixed-top" role="navigation">
 			<div class="container">
 				<div class="navbar-heade navbar-inverse">
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar-1">
@@ -8,9 +8,9 @@
 						<span class="icon-bar"></span>
 					</button>
 					<a class="navbar-brand" href="<?php echo base_url();?>"></a>
-				</div>
+				</div>-->
 				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse" id="top-navbar-1">
+		<!--		<div class="collapse navbar-collapse" id="top-navbar-1">
 					<ul class="nav navbar-nav navbar-right">
 						<li class="dropdown">
 							<a href="<?php echo base_url();?>"><i class="fa fa-home"></i><br>Home</a>
@@ -72,4 +72,4 @@
 					</ul>
 				</div>
 			</div>
-		</nav>
+		</nav> -->

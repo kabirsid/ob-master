@@ -15,7 +15,6 @@
 	//$this->load->view('layout/Automobile');
 	//$this->load->view('layout/Other');
 	// $this->load->view('layout/Testinomials');
-
 ?>
 	<div>
 		<br>

@@ -60,6 +60,7 @@ $query1 = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img
 					</div>
 					<?php } ?>
 	          </div></div></div></div>
+	          
 
 <script type="text/javascript" src="<?php echo base_url();?>assets/js/bxslider.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url();?>assets/js/script.slider.js"></script>

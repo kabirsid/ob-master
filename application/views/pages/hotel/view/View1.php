@@ -206,7 +206,6 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
                 <strong>Posted at: </strong><?php echo $postdate;?>-->
             </p></span></div>
           
-   
     </div>
     <div class="panel-footer" style="background-color: #808080; margin-left: 0px; margin-bottom: 0px; padding: 5px 5px;">
         

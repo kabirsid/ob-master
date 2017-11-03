@@ -13,7 +13,7 @@ $query = "(SELECT realestate.realid as id,realestate.title,realestate.`name`,rea
 ?>
 
 <html>
-<body style="background-color: #ededed;">
+<body>
  <div class="portfolio-container">
 	        <div class="container">
 	        	<div class="row">
@@ -47,7 +47,7 @@ $query = "(SELECT realestate.realid as id,realestate.title,realestate.`name`,rea
 							    			}
 							    	?>
 			      	<div class="col-sm-3">
-		                
+		                <div class="polaroid">
 		                <div class="single-product">
 		                	
 
@@ -73,7 +73,7 @@ $query = "(SELECT realestate.realid as id,realestate.title,realestate.`name`,rea
 			                		</a></h2>
 			                	</div>
 			               
-			               
+			               </div>
 						</div>
 					<?php
 			    		}
@@ -99,7 +99,7 @@ $query = "(SELECT realestate.realid as id,realestate.title,realestate.`name`,rea
 							    			}
 							    ?>	
 							      	<div class="col-sm-3">
-						                
+						                <div class="polaroid">
 						                <div class="single-product">
                                                  <div class="product-f-image">
 							                	<img id="postimg" src="<?php echo $LatestPostsRow2['path'];?>" alt="<?php echo $LatestPostsRow2['title'];?>">
@@ -121,7 +121,7 @@ $query = "(SELECT realestate.realid as id,realestate.title,realestate.`name`,rea
 							                			?>
 							                		</a></h2>
 							                	</div>
-							              
+							              </div>
 							             
 									</div>
 									<?php }?>
@@ -168,6 +168,7 @@ $query = "(SELECT realestate.realid as id,realestate.title,realestate.`name`,rea
 							  ?>
 							    <div class="item active">
 							      <div class="col-sm-3">
+							      	<div class="polaroid">
 					                 <div class="single-product">
                                          <div class="product-f-image">
 					                    
@@ -191,20 +192,21 @@ $query = "(SELECT realestate.realid as id,realestate.title,realestate.`name`,rea
 							                			?>
 							                		</a></h2>
 							                	</div>
-					              
+					              			</div>
 									</div>	
 							 	</div>
 							 	<?php $counter++; }else{?>
 							 	<div class="item">
 							      <div class="col-sm-3">
-					                <div class="single-product">
-                                       <div class="product-f-image">
+							      	<div class="polaroid">
+					                 <div class="single-product">
+                                         <div class="product-f-image">
 					                  
 					                   	<img id="postimg" src="<?php echo $LatestPostsRow['path'];?>" alt="<?php echo $LatestPostsRow['title'];?>"></a>
 							                <div class="product-hover">
                                            <a href="<?php base_url();echo 'index.php/'.$category;?>/view/<?php echo $LatestPostsRow['id'];?>" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                                                   </div>	
-                                                  </div>
+                                              	</div>
 							                	
 							                		<h2><a href="<?php base_url();echo 'index.php/'.$category;?>/view/<?php echo $LatestPostsRow['id'];?>">
 							                			<?php
@@ -218,8 +220,8 @@ $query = "(SELECT realestate.realid as id,realestate.title,realestate.`name`,rea
 							                			
 							                			?>
 							                		</a></h2>
-							                	</div>
-					                </div>
+							               </div>
+							           </div>
 									</div>
 							    </div>
 							 	 <?php	

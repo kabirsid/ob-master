@@ -89,7 +89,7 @@
     
   </button>
      <!-- <a class="navbar-brand" href="#">Your Company</a>-->
-     <img src="<?php echo base_url();?>assets/img/logo.png"; alt="sorry">
+    <a href="<?php echo base_url();?>"><img src="<?php echo base_url();?>assets/img/logo.png"; alt=""></a>
     </div>
     <div class="collapse navbar-collapse" id="navMain">
       <ul class="nav navbar-nav pull-right">
@@ -130,7 +130,7 @@
 							</a>	
 						<?php }?>	
 							<a href="<?php echo base_url();?>index.php/info/feedback">
-							<button class="navbar_btn" id="Button4" >
+							<button class="navbar_btn" id="Button4">
 								<i class="fa fa-question-circle"></i> Help
 							</button>
 							</a>

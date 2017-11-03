@@ -12,11 +12,12 @@ $query1 = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img
 	            	?>
 <div class="col-md-3">
   	
-	<div class="jumbotron" style="background-color: white; padding:10px;font-family: 'Times New Roman', sans-serif;">
+	
+		<div class="polaroid">
 		
-		<div class="col-md-12">
-		    <img  id="postimg" src="<?php echo $RealestateRow['path'];?>" alt="<?php echo $RealestateRow['title'];?>">
-		    	<h2 style="color: red; margin:0px 0px 0px 10px;"> 
+		    <img  id="postimg" src="<?php echo $RealestateRow['path'];?>" alt="<?php echo $RealestateRow['title'];?>" style="opacity: 0.6;">
+		    	<div class="product-hover1">
+		    	<h2 style="color: blue; margin:145px 0px 0px 10px;"> 
 		        			<?php
 		        			$title = $RealestateRow['title'];
 		        			if(strlen($title)>30){
@@ -28,17 +29,32 @@ $query1 = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img
 		        			
 		        			?>
 
-		        		</h2>
-		        	</div>
+		        	</a></h2>
 		        	
+		        	</div>
 		                  
 
 		       
-		   <p style="font-size:16px;margin: -3px;font-family: 'Times New Roman', sans-serif;"> <?php echo $RealestateRow['amenities'] ?></p>
-		   <hr>
-		   <p style="font-size:16px;margin: -10px; "><?php echo $RealestateRow['city'];?></p>
+		   <p style="font-size:16px;font-family: 'Times New Roman', sans-serif;background-color: white;">
+		        			<?php
+		        			$amenities = $RealestateRow['amenities'];
+		        			if(strlen($amenities)>30){
+		        				$amenities = substr($amenities,0,50)." ...";
+		        				echo $amenities;
+		        			}else{
+		        				echo $amenities;
+		        			}
+		        			
+		        			?>
+
+		        	</p>
+
+
+		   <hr style="margin-top: 0px;margin-bottom: 2px;">
+		   <p style="font-size:16px;background-color: white;"><?php echo $RealestateRow['city'];?></p>
+		</div>
 	   </div>
-	</div>	
+	
 	
 		<?php } ?>
      </div>

@@ -1,5 +1,5 @@
  <!-- Slider 2 -->
-        <div class="slider-2-container" style="height: 40%;margin-top: 0px;">
+        <div class="slider-2-container" style="height: 40%;margin-top:60px;">
             <div class="container" style="">
                 <div class="row">
                <!--    <div class="col-sm-8 col-sm-offset-2 slider-2-text wow fadeInUp">-->
@@ -12,9 +12,9 @@
                                     <button type="submit" class="btn">Search</button> -->
 
                                    <div id="imaginary_container"> 
-                <div class="input-group stylish-input-group">
-                    <input type="text" class="form-control" style="color:white;" placeholder="Search for realestate, hotels, tutions...Search" >
-                    <span class="input-group-addon">
+                <div class="input-group stylish-input-group" style="background-color:white;">
+                    <input type="text" class="form-control" style="color:black;" placeholder="Search for realestate, hotels, tutions...Search" >
+                    <span class="input-group-addon" style="background-color: red;color: white;">
                         <button type="submit">
                             <span class="glyphicon glyphicon-search"></span>
                         </button>  

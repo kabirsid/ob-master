@@ -101,7 +101,7 @@
      
 </script>
 </head>
-<body style="background-color: #ededed;">
+<body style="background-color: white;">
 
 
 

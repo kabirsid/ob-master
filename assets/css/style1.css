@@ -423,6 +423,14 @@ z-index: 999;}
     top: 0;
     width: 100%;overflow: hidden;border: 1px solid #ddd;
 }
+
+.product-hover1 {
+    
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;overflow: hidden;
+}
 .product-hover:after {
   background: none repeat scroll 0 0 #000;
   content: "";
@@ -1166,3 +1174,14 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button{background
 .pagination > li > a, .pagination > li > span {
   color: #5a88ca;
 }
+
+/**************************************************************************************************
+                css for home page
+                ***********************************************************************************/
+
+div.polaroid{
+    width: 250px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    text-align: center;
+}
+

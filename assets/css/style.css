@@ -12,7 +12,7 @@ body {
     text-align: center;
     font-family: 'Times New Roman', sans-serif;
     color: #888;
-    font-size: 11px;
+    font-size: 16px;
 }
 .category{
     margin-top: 10px;
@@ -1154,7 +1154,7 @@ Navbar
 *  OPAQUE NAVBAR SECTION
 ***********************************************************************/
 .opaque-navbar {
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.7);
   /* Transparent = rgba(0,0,0,0) / Translucent = (0,0,0,0.5)  */
     height: 60px;
     border-bottom: 0px;

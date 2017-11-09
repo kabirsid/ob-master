@@ -148,13 +148,13 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
         array_push($pathArray, $ViewRow['path']);
     }
  ?>    
-
+<!--
 <div class="page-title-container" style="background-color: grey;">
     <div class="container">
         <div class="row">
             <div class="col-md-2">
-                <h4 style="text-align: left;margin-top: 10px;margin-left: -45px;"> <a href="<?php echo base_url();?>">
-<img src="<?php echo base_url();?>assets/img/logo3.png"></a></h4>
+                <a href="<?php echo base_url();?>" style="text-align: left;">
+<img src="<?php echo base_url();?>assets/img/logo3.png"></a> 
             </div>
             <div class="col-md-10">
             
@@ -166,7 +166,29 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
              
         </div>
     </div>
+</div>-->
+
+
+
+<div class="navbar opaque-navbar page-title-container">
+  <div class="container">
+    <div class="navbar-header">
+     
+    <a href="<?php echo base_url();?>"><img src="<?php echo base_url();?>assets/img/logo.png"; alt=""></a>
+    </div>
+    <div class="col-md-10">
+            
+                <div class="product-bit-title text-center">
+                        <h2><?php echo $title;?></h2>
+                </div>
+           
+        </div>
+    
+  </div>
 </div>
+
+
+
 
 <!--<div class="container">
     <div class="row">
@@ -180,10 +202,11 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
     </div>
 </div>-->
 
-<div class="container" style="margin-left: 70px;">
+<div class="container" style="margin-left: 50px;">
     <div class="row">
         <div class="col-md-12">
-           <div class="jumbotron"  style="margin-left:-20px;background-color: #ffffff; padding-left: 0px;padding-bottom: 0px; padding-right: 0px; padding-top: 0px;">
+         <!--  <div class="jumbotron"  style="margin-left:-20px;background-color: #ffffff; padding-left: 0px;padding-bottom: 0px; padding-right: 0px; padding-top: 0px;"> -->
+            <div class="polaroid" style="width:auto;">
             <div class="panel-body" >
               <div class="col-sm-4" style="padding-bottom: 00px;margin-bottom: 00px;">  
 
@@ -206,7 +229,7 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
                 <strong>Posted at: </strong><?php echo $postdate;?>-->
             </p></span></div>
     </div>
-    <div class="panel-footer" style="background-color: #808080; margin-left: 0px; margin-bottom: 0px; padding: 5px 5px;">
+    <div class="panel-footer" style="background-color: #808080; margin-left: 0px; margin-bottom: 5px; margin-top:10px;padding: 5px 5px;">
         
                 <p class="textcent">
                    &nbsp;  &nbsp;  &nbsp;   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fa fa-map-marker" style="font-size:30px;" aria-hidden="true"></i>
@@ -234,8 +257,9 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
     <div class="container">
         <div class="row">
             <div class="col-md-2">
-            <div class="jumbotron" style="background-color: white; border: red;">
-            <h4 style="margin-top: -25px;">Hotels:</h4>
+                <div class="polaroid" style="width:auto;">
+           <!-- <div class="jumbotron" style="background-color: white; border: red;"> -->
+            <h4 style="padding-top: 5px;">Hotels:</h4>
                     <?php foreach ($Realestate->result_array() as $RealestateRow) {
                     ?>
                         <ul class="list-group">
@@ -262,17 +286,20 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
                             <?php } ?>
                           <a href="<?php echo base_url();?>index.php/Hotel"><h4>More...</h4></a>
                         </div>
-                        </div>
+                    </div>
+                     <!--   </div>-->
                 </div>
                 </div>
            </div> 
         </div>        
         
             <div class="col-md-8">
+
                 <div class="col-md-12" style="text-align: left;">
-                    <div class="jumbotron" style="margin-left:-20px;background-color: #ffffff;">
+                <!--    <div class="jumbotron" style="margin-left:-20px;background-color: #ffffff;"> -->
+                   <div class="polaroid" style="width:auto;">
                     </br>
-                        <h3 style="margin-top: -40px; font-family: ">Description :</h3>
+                        <h3>Description :</h3>
                             <p style="font-size: 16px;">
                                 <?php echo $description; ?>
                             </p>
@@ -299,7 +326,8 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
                     </div>
                     <div class="tab-content">
                         <div role="tabpanel" class="tab-pane fade " id="address">
-                        <div class="jumbotron">
+                       <!-- <div class="jumbotron"> -->
+                        <div class="polaroid" style="width:auto;">
                             <h3>Posted by : <span class="post_title"><?php echo $name;?></span></h3>
                                 <p style="font-size: 16px;">
                                     <span class="violet"> Address: </span><?php echo ucfirst(strtolower($area)).', ';?><?php echo ucfirst(strtolower($city));?><br>
@@ -316,7 +344,8 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
                         </div>
                     <div role="tabpanel" class="tab-pane fade in active" id="home">
                     <div class="row">
-                    <div class="jumbotron" style="font-size: 16px;">
+                   <!-- <div class="jumbotron" style="font-size: 16px;"> -->
+                    <div class="polaroid" style="width:auto;">
                         <?php 
                                 echo $services;
                                        // $b=explode(",",$services);
@@ -366,18 +395,22 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
 
                     <div role="tabpanel" class="tab-pane fade" id="gallery">
                         <div class="col-sm-12" id="Div4">
+                            
                         <form action="#" methode="post" ectype="multipart/form-data">
+                            <div class="polaroid" style="width:auto;">
                         <div class="portfolio-box web-design">
                                 <img style="height:148px; width: 230px;" src="<?php echo base_url();?><?php echo $path?>">
                             </div>
                             </form>
                         </div>
                     </div>
+                    </div>
                     <div role="tabpanel" class="tab-pane fade " id="menu"> 
-                        <div class="col-sm-12">
-                        <div class="jumbotron" style="font-size: 16px;">
+                        <div class="col-md-12">
+                      <!--  <div class="jumbotron" style="font-size: 16px;"> -->
+                        <div class="polaroid" style="width:auto;">
                             <h4><strong> <?php echo $offersmenu; ?></strong></span></h4>
-                            <div class="container">
+                            <div class="container" style="text-align: left;">
     <div class="row">
         <h2>Working Star Ratings for Bootstrap 3 <small>Hover and click on a star</small></h2>
     </div>
@@ -407,6 +440,7 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
       
                 
     <div class="col-md-2">
+        <div class="polaroid" style="width:200px;">
         <div role="tabpanel">
             <ul class="product-tab" role="tablist">
                 <li role="presentation class="active"><a href="#" aria-controls="" role="tab" data-toggle="tab" style="background-color:#5a88ca;">Reviews</a></li>
@@ -416,7 +450,7 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
                     <h2>Reviews</h2>
                         <div class="submit-review">
                             <p><label for="name">Name</label> <input name="name" type="text"></p>
-                            <p><label for="email">Email</label> <input name="email" type="email"></p>
+                            <p><label for="email">Email</label> <input name="email" type="email" style="width:95%"></p>
                                 <div class="rating-chooser">
 
                                     <p>Your rating</p>
@@ -429,13 +463,14 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
                                         </div>
                                            <div id="stars" class="starrr"></div>
                                 </div>
-                                <p><label for="review">Your review</label> <textarea name="review" id="" cols="30" rows="10"></textarea></p>
+                                <p><label for="review">Your review</label> <textarea style="width:95%;" name="review" id="" cols="30" rows="10"></textarea></p>
                                 <p><input type="submit" value="Submit"></p>
                         </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
     </div>
         
     </div>

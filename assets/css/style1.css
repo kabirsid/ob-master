@@ -733,7 +733,8 @@ width: 10px;
   /*font-size: 15px;*/
   font-weight: 10;
   margin: 0;
-  padding: 10px 0;color: black;
+  /*padding: 10px 0; */
+  color: black;
 }
 
 .single-product-area .zigzag-bottom {background-color: #f4f4f4}
@@ -912,9 +913,11 @@ form.cart {
 .submit-review label {
     display: block;
 }
-.submit-review input[type="text"], .submit-review input[type="email"], .submit-review textarea {
+.submit-review input[type="text"], 
+.submit-review input[type="email"], 
+.submit-review textarea {
     margin-bottom: 20px;
-    width: 100%;
+    
 }
 .rating-chooser {
     margin-bottom: 30px;

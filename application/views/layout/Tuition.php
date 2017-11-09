@@ -20,7 +20,7 @@ $query = "SELECT * FROM tution INNER JOIN tut_img ON tution.tutid = tut_img.tuti
                         <img id="postimg" src="<?php echo $RealestateRow['path'];?>" alt="<?php echo $RealestateRow['title'];?>">
                               <div class="product-hover">
                                        
-                                        <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                        <a href="<?php echo base_url();?>index.php/Tuition/view/<?php echo $RealestateRow['tutid'];?>" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                                     </div>
                                 </div>
                                     <h2><a href="<?php echo base_url();?>index.php/Tuition/view/<?php echo $RealestateRow['tutid'];?>">

@@ -24,6 +24,22 @@ foreach ($travelling_info as $row){
 	  <input type="text" class="form-control" id="title" name="title">
 	</div>
 	</div>
+	<div class="col-md-6">
+					<div class="form-group">
+	  					<label for="Type">Type:</label>
+	  						<select name="type" class="form-control">
+	  						<option>Painter</option>
+	  						<option>Gas Services</option>
+	  						<option>Marble Fitter</option>
+	  						<option>Plumbing</option>
+	  						<option>Carpenter</option>
+	  						<option>Health Services</option>
+	  						<option>Electricions</option>
+	  						<option>PestControl</option>
+	  						</select>
+					</div>
+				</div>
+	
 	<div class="col-md-12">
 	<div class="form-group">
 	  <label for="Address">Address:</label><span style="color: red;">*</span>  <span class="error" id="address_error"></span>
@@ -35,13 +51,14 @@ foreach ($travelling_info as $row){
 	  <label for="price">Price:</label><span class="error" id="price_error"></span>
 	  <input type="text" class="form-control" id="price" name="price">
 	</div>
-	</div>
+	</div> 
 	<div class="col-md-6">
 	<div class="form-group">
 	  <label for="Description">Description:</label><span style="color: red;">*</span>  <span class="error" id="description_error"></span>
 	  <textarea class="form-control" id="description" name="description"></textarea>
 	</div>
 	</div>
+	
 	<div class="col-md-6">
 	<div class="form-group">
 	  <label for="Mobile">Mobile:</label>
@@ -54,6 +71,7 @@ foreach ($travelling_info as $row){
 	  <input type="text" class="form-control" id="email" name="email" value="<?php echo $row['email']?>"  readonly>
 	</div>
 	</div>
+	
 	<div class="col-md-6">
 	<div class="form-group">
 	  <label for="City">City:</label><span style="color: red;">*</span>  <span class="error" id="city_error"></span>
@@ -65,13 +83,13 @@ foreach ($travelling_info as $row){
 	  <label for="Area">Area:</label><span style="color: red;">*</span>  <span class="error" id="area_error"></span>
 	  <input type="text" class="form-control" id="area" name="area">
 	</div>
-	</div>
+	</div> 
 	<div class="col-md-6">
 	<div class="form-group">
 	  <label for="Offerend">Offer end date:</label>
 	  <input type="date" class="form-control" id="offerend" name="offerend">
 	</div>
-	</div>
+	</div>  
 	<div class="col-md-6">
 	<div class="form-group">
 	  <label for="Image">Image:</label>

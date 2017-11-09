@@ -1,5 +1,6 @@
 <?php if(isset($_SESSION['userid'])){?>
-<div class="col-md-12">
+<div class="col-md-12" style="margin-top: 70px;">
+	<span>Hotel</span>
 <?php  
 $userid = $_SESSION['userid'];
 $hotel_info=$this->db->get_where('register',array('reg_id'=>$userid))->result_array();

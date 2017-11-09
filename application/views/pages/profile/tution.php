@@ -1,5 +1,6 @@
 <?php if(isset($_SESSION['userid'])){?>
-<div class="col-md-9">
+<div class="col-md-9" style="margin-top: 70px;">
+	<span>Tution</span>
 <?php 
 $userid = $_SESSION['userid'];
 $tution_info=$this->db->get_where('register',array('reg_id'=>$userid))->result_array();

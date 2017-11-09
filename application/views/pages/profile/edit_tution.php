@@ -1,5 +1,5 @@
 <?php if(isset($_SESSION['userid'])){?>
-<div class="col-md-9">
+<div class="col-md-9" style="margin-top: 70px;">
 <div class="col-md-12">
 	<a href="<?php echo base_url();?>index.php/Basic_Controller/user_tution"><button class="btn btn-success">Add</button></a>
 	<a href="<?php echo base_url();?>index.php/Basic_Controller/user_tution_view"><button class="btn btn-success">View</button></a>

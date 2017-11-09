@@ -1,5 +1,5 @@
 <?php if(isset($_SESSION['userid'])){?>
-<div class="col-md-12">
+<div class="col-md-12" style="margin-top: 70px;">
 <?php 
 $userid = $_SESSION['userid'];
 $realestate_data = $this->db->order_by('date','desc')->get_where('tution',array('userid' => $userid))->result_array();
@@ -11,7 +11,7 @@ $realestate_data = $this->db->order_by('date','desc')->get_where('tution',array(
 			</div>	
 <?php }?>
 <div class="col-md-12">
-  <a href="<?php echo base_url();?>index.php/Basic_Controller/user_tution"><button class="btn btn-success">Add</button></a>
+  <a href="<?php echo base_url();?>index.php/Basic_Controller/user_tution"><button class="btn btn-success">Add Tution</button></a>
 </div>
  <table class="table table-hover">
     <thead>

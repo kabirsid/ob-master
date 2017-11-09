@@ -11,7 +11,7 @@
                                     
                                     <button type="submit" class="btn">Search</button> -->
 
-                                   <div id="imaginary_container"> 
+              <div id="imaginary_container"> 
                 <div class="input-group stylish-input-group" style="background-color:white;">
                     <input type="text" class="form-control" style="color:black;" placeholder="Search for realestate, hotels, tutions...Search" >
                     <span class="input-group-addon" style="background-color: red;color: white;">

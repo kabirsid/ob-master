@@ -4,8 +4,9 @@
  		$id = $ViewRow['travelid'];
  		$name = $ViewRow['name'];
  		$title = $ViewRow['title'];
+ 		$price = $ViewRow['type'];
  		$address = $ViewRow['address'];
- 		$price = $ViewRow['price'];
+ 		//$price = $ViewRow['price'];
  		if($price!=null){
  			$price = number_format($price);
  		}else{

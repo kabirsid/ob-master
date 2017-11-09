@@ -87,12 +87,13 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
 
 
 
-<div class="col-md-12">
+
+
 
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-         <!--  <div class="jumbotron"  style="margin-left:-20px;background-color: #ffffff; padding-left: 0px;padding-bottom: 0px;  0px; padding-top: 0px;"> -->
+        
             <div class="polaroid" style="width:auto;">
             <div class="panel-body" >
               <div class="col-sm-4" style="padding-bottom: 00px;margin-bottom: 00px;">  
@@ -103,20 +104,17 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
         </div>
          <h3 style="text-align: left;">Posted by : <span class="post_title"><?php echo $name;?></span></h3>
             <p style="font-size: 16px;">
-               <!-- <div class="col-sm-1"> 
-               <span class="violet" style="text-align: center;font-size: 18px;"> Address: </span></div>-->
+              
               <div class="col-sm-4" style="text-align: left;"> 
                <span style="font-size: 16px; text-align: left;"><?php echo ucfirst(strtolower($area)).', ';?><?php echo ucfirst(strtolower($city));?><br>
                 <?php echo $address;?><br>
                 <?php if($price!=null){?>
-               <!-- <span class="violet">Price: </span><?php echo $price;?><br>
-                <?php }?>
-                <span class="violet">Mobile: </span><?php echo $mobile;?><br>
-                <span class="violet">Email ID: </span><?php echo $email;?><br>
-                <hr>
-                <strong>Posted at: </strong><?php echo $postdate;?>-->
-            </p></span></div>
+               
+            </p>
+        </span>
+        </div>
     </div>
+
     <div class="panel-footer" style="background-color: #808080; margin-left: 0px; margin-bottom: 5px; margin-top:10px;padding: 5px 5px;">
         
                 <p class="textcent">
@@ -133,7 +131,7 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
     </div>
 
           
-</p>
+
 </div>
        </div> 
    </div>
@@ -146,7 +144,7 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
         <div class="row">
             <div class="col-md-2">
                 <div class="polaroid" style="width:auto;">
-           <!-- <div class="jumbotron" style="background-color: white; border: red;"> -->
+        
             <div class="panel-default">
                 <div class="panel-heading">
             <h4 style="padding-top: 5px;">Hotels:</h4></div>
@@ -178,26 +176,25 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
                           <a href="<?php echo base_url();?>index.php/Hotel"><h4>More...</h4></a>
                         </div>
                     </div>
-                     <!--   </div>-->
+                
                 </div>
                 </div>
             </div>
            </div> 
-
-        </div>  
-
+        </div>        
         
-            <div class="col-md-8" >
+            <div class="col-md-8" style="padding-right: 20px;">
 
-                <div class="col-md-12" style="text-align: left; " >
-                <!--    <div class="jumbotron" style="margin-left:-20px;background-color: #ffffff;"> -->
+                <div class="col-md-12" style="text-align: left;">
+              
                    <div class="polaroid" style="width:auto; ">
                     </br>
                         <h3>Description :</h3>
                             <p style="font-size: 16px;">
                                 <?php echo $description; ?>
                             </p>
-                                <?php if($amenities!=null){?>
+                            <?php
+                            if($amenities!=null){?>
                         <h3>Facilities :</h3>
                             <p style="font-size: 16px;">
                                 <?php echo $amenities; ?>
@@ -238,7 +235,7 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
                         </div>
                     <div role="tabpanel" class="tab-pane fade in active" id="home">
                     <div class="row">
-                   <!-- <div class="jumbotron" style="font-size: 16px;"> -->
+                   
                     <div class="polaroid" style="width:auto;">
                         <?php 
                                 echo $services;
@@ -268,7 +265,7 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
                     </div>
                     <div role="tabpanel" class="tab-pane fade " id="menu"> 
                         <div class="col-md-12">
-                      <!--  <div class="jumbotron" style="font-size: 16px;"> -->
+                  
                         <div class="polaroid" style="width:auto;">
                             <h4><strong><?php echo $offersmenu; ?></strong></span></h4>ddd
  
@@ -303,14 +300,14 @@ dd</div>
     
 
  <div class="col-md-2">
-    <div class="polaroid" style="width:170px;">
+    <div class="polaroid" style="width:200px;">
      
             <div class="panel panel-default">
               <div class="panel-heading">Review</div>
               <div class="panel-body">
-                <input name="name" type="text" placeholder="Name..."  style="width:85%;" ></div></br>
-                <input name="email" type="email" placeholder="email.." style="width:70%;"></br></br>
-                <input type="submit" name=""></br>
+                <input name="name" type="text"></div></br>
+                <input name="email" type="email" style="width:80%"></br>
+                <input type="submit" name="">
 
              </div>
             </div>
@@ -326,8 +323,7 @@ dd</div>
 </div>
 
 </div>
-</form>
-</div>
+
     
     <!-- Latest jQuery form server -->
     <script src="https://code.jquery.com/jquery.min.js"></script>

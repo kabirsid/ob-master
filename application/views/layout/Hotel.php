@@ -20,10 +20,11 @@ $query1 = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img
   	<div class="col-xs-12 col-sm-3">
   		
        <div class="single-product">
+     
        
                    <div class="product-f-image">
 
-	                    <img  id="postimg" src="<?php echo $RealestateRow['path'];?>" alt="<?php echo $RealestateRow['title'];?>">
+	                    <a><img  id="postimg" src="<?php echo $RealestateRow['path'];?>" alt="<?php echo $RealestateRow['title'];?>"></a>
 			                	<div class="product-hover">
                                        <h2 style="color: red;"> 
 			                			<?php
@@ -36,7 +37,7 @@ $query1 = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img
 			                			}
 			                			
 			                			?>
-			                		</a></h2>
+			                		</h2>
                                         <a href="<?php echo base_url();?>index.php/Hotel/view/<?php echo $RealestateRow['hotelid'];?>" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                                     </div>
                                      </div>
@@ -59,7 +60,11 @@ $query1 = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img
 		                </a>
 					</div>
 					<?php } ?>
-	          </div></div></div></div>
+	          </div>
+	      </div>
+
+	  </div>
+	</div>
 	          
 
 <script type="text/javascript" src="<?php echo base_url();?>assets/js/bxslider.min.js"></script>

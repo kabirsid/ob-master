@@ -1,4 +1,6 @@
-<?php if(isset($_SESSION['userid'])){?><div class="col-md-9">
+<?php if(isset($_SESSION['userid'])){?>
+<div class="col-md-9" style="margin-top: 70px; ">
+	<span>Realestate</span>
 <?php 
 $userid = $_SESSION['userid'];
 $realestate_info=$this->db->get_where('register',array('reg_id'=>$userid))->result_array();
@@ -6,7 +8,7 @@ foreach ($realestate_info as $row){
 ?>
 <form id="real_form" method="post" action="<?php echo base_url();?>index.php/Basic_Controller/user_realestate/create" enctype="multipart/form-data">
 	<?php if($this->session->flashdata('message')!=null){?>
-	<div class="col-md-9" id="alert">
+	<div class="col-md-9" id="alert" style="margin-top: 70px;">
 	<br>
 		<div id="danger-alert" class="alert alert-danger"><?php echo $this->session->flashdata('message');?></div>
 	</div>

@@ -10,7 +10,7 @@ $hotel_data = $this->db->order_by('date','desc')->get_where('hotel',array('useri
 						<div id="danger-alert" class="alert alert-danger"><?php echo $this->session->flashdata('message');?></div>
 			</div>	
 <?php }?>
-<div class="col-md-12">
+<div class="col-md-12" style="margin-top: 70px;">
   <a href="<?php echo base_url();?>index.php/Basic_Controller/user_hotel"><button class="btn btn-success">Add</button></a>
 </div>
  <table class="table table-hover">

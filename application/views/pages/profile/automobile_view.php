@@ -1,5 +1,5 @@
 <?php if(isset($_SESSION['userid'])){?>
-<div class="col-md-12">
+<div class="col-md-12" style="margin-top: 70px;">
 <?php 
 $userid = $_SESSION['userid'];
 $automobile_data = $this->db->order_by('date','desc')->get_where('automobile',array('userid' => $userid))->result_array();

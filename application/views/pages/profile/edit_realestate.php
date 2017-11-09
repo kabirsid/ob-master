@@ -1,5 +1,5 @@
 <?php if(isset($_SESSION['userid'])){?>
-<div class="col-md-9">
+<div class="col-md-9" style="margin-top: 70px;">
 	<?php if($this->session->flashdata('message')!=null){?>
 	<div class="col-md-9">
 	<br>

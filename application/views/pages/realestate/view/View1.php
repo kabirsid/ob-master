@@ -21,25 +21,32 @@
 <body style="background-color: white;">
 
 
-
-
-
-     <?php 
-$query = "SELECT * FROM automobile INNER JOIN automobile_img ON automobile.autoid = automobile_img.autoid GROUP BY automobile.autoid ORDER BY RAND() LIMIT 4";          
+ <?php 
+$query = "SELECT realestate.realid, realestate.`name`, realestate.title, realestate.type, realestate.address, realestate.builtup, realestate.price, realestate.description, realestate.mobile, realestate.email, realestate.amenities, realestate.city, realestate.area, realestate.date, realestate.offerend, realestate.category, realestate.userid, real_img.path, real_img.id FROM realestate INNER JOIN real_img ON realestate.realid = real_img.realid GROUP BY realid ORDER BY RAND() LIMIT 4";          
     $Realestate = $this->db->query($query);
  ?>
 
- <?php 
+
+     <?php 
     $pathArray = array();
-    foreach ($AutomobileView as $ViewRow) {
-        $id = $ViewRow['autoid'];
+    foreach ($RealestateView as $ViewRow) {
+        $id = $ViewRow['realid'];
         $name = $ViewRow['name'];
         $title = $ViewRow['title'];
         $type = $ViewRow['type'];
         $address = $ViewRow['address'];
+        $builtup = $ViewRow['builtup'];
+        $price = $ViewRow['price'];
+        if($price!=null){
+            $price = number_format($price);
+        }else{
+            $price = "NA";
+        }
+
         $description = $ViewRow['description'];
         $mobile = $ViewRow['mobile'];
         $email = $ViewRow['email'];
+        $amenities = $ViewRow['amenities'];
         $city = $ViewRow['city'];
         $area = $ViewRow['area'];
         $postdate = strtotime($ViewRow['date']);
@@ -132,13 +139,13 @@ $query = "SELECT * FROM automobile INNER JOIN automobile_img ON automobile.autoi
            <!-- <div class="jumbotron" style="background-color: white; border: red;"> -->
             <div class="panel-default">
                 <div class="panel-heading">
-            <h4 style="padding-top: 5px;">Automobiles:</h4></div>
+            <h4 style="padding-top: 5px;">Realestate:</h4></div>
                     <?php foreach ($Realestate->result_array() as $RealestateRow) {
                     ?>
                     
                             <div class="panel-body">
                                 <h4>
-                                    <a href="<?php echo base_url();?>index.php/Automobile/view/<?php echo $RealestateRow['autoid'];?>">
+                                    <a href="<?php echo base_url();?>index.php/Realestate/view/<?php echo $RealestateRow['realid'];?>">
                                         <?php
                                         $title = $RealestateRow['title'];
                                         if(strlen($title)>30){
@@ -158,7 +165,7 @@ $query = "SELECT * FROM automobile INNER JOIN automobile_img ON automobile.autoi
                         </ul>
                         <div>
                             <?php } ?>
-                          <a href="<?php echo base_url();?>index.php/Automobile"><h4>More...</h4></a>
+                          <a href="<?php echo base_url();?>index.php/Realestate"><h4>More...</h4></a>
                         </div>
                     </div>
                      <!--   </div>-->
@@ -166,6 +173,8 @@ $query = "SELECT * FROM automobile INNER JOIN automobile_img ON automobile.autoi
                 </div>
             </div>
            </div> 
+        
+
 
        
 

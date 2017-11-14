@@ -257,12 +257,24 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
                     <div role="tabpanel" class="tab-pane fade" id="gallery">
                         <div class="col-sm-12" id="Div4">
                             
-                        <form action="#" methode="post" ectype="multipart/form-data">
+                        
                             <div class="polaroid" style="width:auto;">
+                       
+                                 <div class="row">
+                    <div class="col-sm-12">
+                        <?php for($i=0;$i<count($pathArray);$i++){?>
+                        
                         <div class="portfolio-box web-design">
-                                <img style="height:148px; width: 230px;" src="<?php echo base_url();?><?php echo $path?>">
+                            <div class="col-md-3">            
+                                <img style="width:80%;height:50%;" src="<?php echo base_url();?><?php echo $pathArray[$i]?>" alt="" data-at2x="<?php echo $pathArray[0];?>">
                             </div>
-                            </form>
+                        </div>
+                
+                        <?php }?>
+                    </div>
+                </div>
+                            
+                            
                         </div>
                     </div>
                     </div>
@@ -270,28 +282,8 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
                         <div class="col-md-12">
                       <!--  <div class="jumbotron" style="font-size: 16px;"> -->
                         <div class="polaroid" style="width:auto;">
-                            <h4><strong><?php echo $offersmenu; ?></strong></span></h4>ddd
+                            <h4><strong><?php echo $offersmenu; ?></strong></span></h4>
  
- <div class="container" style="text-align: left;">
-    <div class="row">
-        <h2>Working Star Ratings for Bootstrap 3 <small>Hover and click on a star</small></h2>
-    </div>
-    <div class="row lead">
-        <div id="hearts" class="starrr"></div>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-        You gave a rating of <span id="count">0</span> star(s)
-    </div>
-    
-    <div class="row lead">
-        <p>Also you can give a default rating by adding attribute data-rating</p>
-        <div id="hearts-existing" class="starrr" data-rating='4'></div>
-        You gave a rating of <span id="count-existing">4</span> star(s)
-    </div>
-dd</div>
                             </div>
                         </div>  
                     </div>

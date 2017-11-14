@@ -123,7 +123,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				$userid=$_SESSION['userid'];
 				$services=$this->input->post('services');
 				//$b=implode(",",$services);
-				$this->BasicModel->insert_user_hotel($hotelid,$services);
+				$this->BasicModel->insert_user_hotel($hotslid,$services);
 				$this->image_upload('hotel',$userid);
 				$this->session->set_flashdata('message','Data Uploaded Successfully');
 				redirect(base_url() . 'index.php/Basic_Controller/user_hotel');

@@ -191,7 +191,7 @@ $query = "SELECT * FROM automobile INNER JOIN automobile_img ON automobile.autoi
                         <ul class="product-tab" role="tablist">
                             
                             <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Services</a></li>
-                            <li role="presentation"><a href="#menu" aria-controls="menu" role="tab" data-toggle="tab">Menu</a></li>
+                            
                             <li role="presentation"><a href="#gallery" aria-controls="gallery" role="tab" data-toggle="tab">Gallery</a></li>
                       <li role="presentation"><a href="#address" aria-controls="address" role="tab" data-toggle="tab">Address</a></li>
                         </ul>
@@ -244,15 +244,7 @@ $query = "SELECT * FROM automobile INNER JOIN automobile_img ON automobile.autoi
                         <?php } ?>
                     </div>
                     </div>
-                    <div role="tabpanel" class="tab-pane fade " id="menu"> 
-                        <div class="col-md-12">
-                      <!--  <div class="jumbotron" style="font-size: 16px;"> -->
-                        <div class="polaroid" style="width:auto;">
-                            <h4><strong><?php echo  $description; ?></strong></span></h4>
- 
-                            </div>
-                        </div>  
-                    </div>
+                    
                 </div>
             </div>
         </div>

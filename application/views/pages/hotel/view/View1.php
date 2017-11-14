@@ -266,7 +266,7 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
                         
                         <div class="portfolio-box web-design">
                             <div class="col-md-3">            
-                                <img style="width:80%;height:50%;" src="<?php echo base_url();?><?php echo $pathArray[$i]?>" alt="" data-at2x="<?php echo $pathArray[0];?>">
+                                <img style="width:100%;height:120%;" src="<?php echo base_url();?><?php echo $pathArray[$i]?>" alt="" data-at2x="<?php echo $pathArray[0];?>">
                             </div>
                         </div>
                 

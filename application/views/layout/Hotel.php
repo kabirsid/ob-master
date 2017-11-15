@@ -24,7 +24,7 @@ $query1 = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img
        
                    <div class="product-f-image">
 
-	                    <a><img  id="postimg" src="<?php echo $RealestateRow['path'];?>" alt="<?php echo $RealestateRow['title'];?>"></a>
+	                    <a><div class=new_prod_bg"><img  id="postimg" src="<?php echo $RealestateRow['path'];?>" alt="<?php echo $RealestateRow['title'];?>"></div></a>
 			                	<div class="product-hover">
                                        <h2 style="color: red;"> 
 			                			<?php

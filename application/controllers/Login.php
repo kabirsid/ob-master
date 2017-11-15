@@ -16,7 +16,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		}
 		public function newuser(){
 			$data['pagename']='registercontainer.php';
-			$this->load->view('pages/loginregi/login.php',$data);
+			$this->load->view('pages/loginrgi/login.php',$data);
 		}
 		public function sigin()
 		{

@@ -82,7 +82,7 @@ $query = "(SELECT realestate.realid as id,realestate.title,realestate.`name`,rea
 							    <div class="item">
 							    <?php 
 							    	foreach ($LatestPostsArrayChunked[0] as $LatestPostsRow2) {
-							    		$category = $LatestPostsRow2['category'];
+							    		$category = $LatestPostsRow['category'];
 							    			if($category==0){
 							    				$category = 'Realestate';
 							    			}elseif ($category == 1) {

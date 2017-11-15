@@ -12,8 +12,8 @@ $query = "SELECT * FROM tution INNER JOIN tut_img ON tution.tutid = tut_img.tuti
                 <div class="row">
                     <?php foreach ($Realestate->result_array() as $RealestateRow) {
                     ?>
-                    <div class="col-xs-12 col-sm-3">
-                       
+                    <div class="col-md-3">
+                       <div class="polaroid">
                        <div class="single-product">
                                 <div class="product-f-image">
 
@@ -40,6 +40,7 @@ $query = "SELECT * FROM tution INNER JOIN tut_img ON tution.tutid = tut_img.tuti
                         </div>
                         </a>
                     </div>
+                </div>
                     <?php } ?>
                 </div>
             </div>

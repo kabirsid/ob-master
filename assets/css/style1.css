@@ -1282,3 +1282,11 @@ div.paddreview{
 .star-rating .fa-star{color: yellow;}
 #hearts { color: #ee8b2d;}
 #hearts-existing { color: #ee8b2d;}
+
+.new_prod_bg{
+width:132px;
+height:119px;
+text-align:center;
+background:url(images/new_prod_box.gif) no-repeat center;
+position:relative;
+}

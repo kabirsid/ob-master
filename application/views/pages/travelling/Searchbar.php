@@ -9,7 +9,7 @@
                                 <div class="form-group">
                                     <div class="col-md-8 col-xs-12">
                                     <form method="post" action="<?php base_url();?>travelling/search">
-                                    <i class="fa fa-car"></i><h1>Travelling <?php if(isset($query)){echo $query;}?></h1>
+                                    <i class="fa fa-car"></i><h1>services <?php if(isset($query)){echo $query;}?></h1>
                                     <input type="text" name="q" placeholder="Search for travel agencies ..." class="contact-name" id="contact-name" autocomplete="off">
                                     <button type="submit" class="btn">Search</button>
                                     </div>

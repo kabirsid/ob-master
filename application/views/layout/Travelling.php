@@ -21,7 +21,7 @@ $query = "SELECT * FROM travelling INNER JOIN travelling_img ON travelling.trave
 		                  <img id="postimg" src="<?php echo $RealestateRow['path'];?>" alt="<?php echo $RealestateRow['title'];?>">
 			                	  <div class="product-hover">
                                        
-                                        <a href="<?php echo base_url();?>index.php/Travelling/view/<?php echo $RealestateRow['travelid'];?>" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                        <a href="<?php echo base_url();?>index.php/T" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                                     </div>
                                      </div>
 			                	

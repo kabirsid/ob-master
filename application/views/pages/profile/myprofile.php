@@ -13,13 +13,13 @@
 				<div id="danger-alert" class="alert alert-danger"><?php echo $this->session->flashdata('message');?></div>
 			</div>	
 		<?php }?>
-	<div class="col-md-6">
+	<div class="col-md-6" style="margin-top: 60px;">
 		<div class="form-group">
 		  <label for="id">Offers Bull User ID:</label>
 		  <input type="text" class="form-control" id="id" value="<?php echo $row['reg_id']?>" disabled>
 		</div>
 	</div>
-	<div class="col-md-6">
+	<div class="col-md-6" style="margin-top: 60px;>
 		<div class="form-group">
 		  <label for="username">Name:</label>
 		  <input type="text" class="form-control" id="username" value="<?php echo $row['username']?>" disabled>
@@ -57,7 +57,7 @@
 	</div>
 	
 	<div class="col-md-9">
-		<button type="submit" class="btn">Update Profile</button>
+		<button type="submit" class="btn" href="<?php echo base_url();?>index.php/Basic_Controller/user_hotel_view">Update Profile</button>
 	</div>	
 </form>
 		</div>

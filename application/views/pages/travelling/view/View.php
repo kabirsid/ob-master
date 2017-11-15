@@ -32,7 +32,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 wow fadeIn">
-                        <h1>Travelling / <span class="post_title"><?php echo $title;?></span></h1>
+                        <h1>SERvice / <span class="post_title"><?php echo $title;?></span></h1>
                     </div>
                 </div>
             </div>

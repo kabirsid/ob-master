@@ -74,11 +74,6 @@
 			</div>
 		</nav> -->
 
-     <?php 
-$query = "SELECT * FROM register";          
-    $Register = $this->db->query($query);
- ?>
-
 
 <!--
 ********************************************************************
@@ -98,6 +93,13 @@ $query = "SELECT * FROM register";
     <div class="collapse navbar-collapse" id="navMain">
     	<?php if(isset($_SESSION['userid']))
                             {
+
+   
+ $userid=$_SESSION['userid'];
+$query = "SELECT * FROM register where reg_id=$userid";          
+    $Register = $this->db->query($query);
+ 
+
 						?>
     
  
@@ -123,7 +125,7 @@ $query = "SELECT * FROM register";
        <li> <a href="<?php echo base_url();?>index.php/Basic_Controller/user_realestate_view">My RealEstate</a></li>
         <li style="color:blue;">  <a href="<?php echo base_url();?>index.php/Basic_Controller/user_tution_view">My Tution</a></li>
         <li>  <a href="<?php echo base_url();?>index.php/Basic_Controller/user_hotel_view">My Hotels</a></li>
-        <li>  <a href="<?php echo base_url();?>index.php/Basic_Controller/user_travelling_view">My Travelling</a></li>
+        <li>  <a href="<?php echo base_url();?>index.php/Basic_Controller/user_travelling_view">My Services</a></li>
         <li>  <a href="<?php echo base_url();?>index.php/Basic_Controller/user_automobile_view">My Automobile</a></li>
         <li>  <a href="<?php echo base_url();?>index.php/Basic_Controller/user_other_view">My Other</a></li>
  
@@ -144,10 +146,17 @@ $query = "SELECT * FROM register";
           </ul>
         </li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+				          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+				
+				<?php
+				    	
 
-
-          	username
+				 foreach ($Register->result_array() as $RealestateRow) {
+				
+					            
+				$username=$RealestateRow['username'];
+				echo $username;}
+				         	?>
           	<b class="caret"></b></a>
           	
           <ul class="dropdown-menu">
@@ -210,4 +219,3 @@ $query = "SELECT * FROM register";
     </div>
   </div>
 </div>
-

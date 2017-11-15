@@ -183,7 +183,7 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
                 </div>
             </div>
            </div> 
-
+</div>
         </div>  
 
         
@@ -272,26 +272,7 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
                         <div class="polaroid" style="width:auto;">
                             <h4><strong><?php echo $offersmenu; ?></strong></span></h4>ddd
  
- <div class="container" style="text-align: left;">
-    <div class="row">
-        <h2>Working Star Ratings for Bootstrap 3 <small>Hover and click on a star</small></h2>
-    </div>
-    <div class="row lead">
-        <div id="hearts" class="starrr"></div>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-        You gave a rating of <span id="count">0</span> star(s)
-    </div>
-    
-    <div class="row lead">
-        <p>Also you can give a default rating by adding attribute data-rating</p>
-        <div id="hearts-existing" class="starrr" data-rating='4'></div>
-        You gave a rating of <span id="count-existing">4</span> star(s)
-    </div>
-dd</div>
+
                             </div>
                         </div>  
                     </div>
@@ -318,14 +299,7 @@ dd</div>
   
 
     </div>
-    </div>
-    </div>
-        
-    </div>
-</div> 
-</div>
-
-</div>
+    
 </form>
 </div>
     

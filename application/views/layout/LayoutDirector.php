@@ -11,7 +11,7 @@
 		$this->load->view('layout/hotel2');
 	$this->load->view('layout/Tuition');
 
-	//$this->load->view('layout/Travelling');
+	$this->load->view('layout/Travelling');
 	//$this->load->view('layout/Automobile');
 	//$this->load->view('layout/Other');
 	// $this->load->view('layout/Testinomials');

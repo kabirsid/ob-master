@@ -117,7 +117,7 @@ $query = "SELECT * FROM register where reg_id=$userid";
     <!-- Collect the nav links, forms, and other content for toggling -->
   
     <ul class="nav navbar-nav pull-">
-        
+        <li style="margin-left: 5px;" data-toggle="modal" data-target="#myModal"><a href="#">POST FREE ADD</a></li><
         <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Add your add <b class="caret"></b></a>
           <ul class="dropdown-menu">
@@ -170,6 +170,104 @@ $query = "SELECT * FROM register where reg_id=$userid";
       </ul>
     </div><!-- /.navbar-collapse -->
  <!-- /.container-fluid -->
+<!--
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          
+        </div>
+        <div class="modal-body">
+        	 <form name="info_form" class="form-inline" action="#" method="post">
+                        <div class="form-group col-sm-12">
+                            <input type="text" class="form-control" name="name" id="name" placeholder="Enter Name">
+                        </div>
+                        <div class="form-group col-sm-12">
+                            <input type="email" class="form-control" name="emailid" id="emailid" placeholder="Enter Email">
+                        </div>
+                        
+                        <div class="form-group col-sm-12">
+                            <input type="text" class="form-control" name="phoneno" id="phoneno" placeholder="Enter Phone">
+                        </div>
+                        
+                    
+                        
+                    </form>
+
+      
+        <div class="modal-footer">
+        	<button type="submit" class="btn btn-default">Submit</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>-->
+
+  <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+            
+            <!-- Modal content-->
+            <div class="modal-content row">
+                <div class="modal-header custom-modal-header">
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                    <h4 class="modal-title">ADD Free Post</h4>
+                </div>
+                <div class="modal-body">
+                    
+
+<form name="info_form" class="form-inline" action="<?php echo base_url();?>index.php/Basic_Controller/userinformation" method="post">
+                        <div class="form-group col-sm-6">
+                            <input type="text" class="form-control" name="name" id="name" placeholder="Enter First Name">
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <input type="text" class="form-control" name="name" id="name" placeholder="Enter last Name">
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <input type="email" class="form-control" name="emailid" id="emailid" placeholder="Enter Email">
+                        </div>
+                        
+                        <div class="form-group col-sm-6">
+                            <input type="text" class="form-control" name="phoneno" id="phoneno" placeholder="Enter Phone">
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <input type="text" class="form-control" name="title" id="title" placeholder="Enter Title">
+                        </div>
+                        <div class="col-md-6">
+	<div class="form-group">
+	  
+	  <input type="file" class="form-control" id="image" name="image[]" multiple="multiple" required="required">
+	</div>
+</div>
+                         
+
+                        
+                        
+
+                        <div class="form-group col-sm-6">
+                        	<textarea class="form-control" name="discrioption" id="discription" placeholder="Enter Discription"></textarea>
+                        </div>
+                        <div class="form-group col-sm-6">
+                        	<textarea class="form-control" name="address" id="address" placeholder="Enter Address"></textarea>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <input type="text" class="form-control" name="city" id="city" placeholder="Enter City">
+                        </div>
+
+                    
+                        <div class="form-group col-sm-12">
+                            <button type="submit" class="btn btn-default pull-right">Submit</button>
+                        </div>
+                    </form>
+		
+
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+
 
 
 						<?php 
@@ -181,7 +279,7 @@ $query = "SELECT * FROM register where reg_id=$userid";
 				    <li><a href="<?php echo base_url();?>index.php/Realestate">Realestate</a></li> 
 				    <li><a href="<?php echo base_url();?>index.php/Tuition">Tuition</a></li> 
 				    <li><a href="<?php echo base_url();?>index.php/Automobile">Automobile</a></li> 
-				    <li><a href="<?php echo base_url();?>index.php/Travelling">Travelling</a></li> 
+				    <li><a href="<?php echo base_url();?>index.php/Travelling">Services</a></li> 
 				    <li><a href="<?php echo base_url();?>index.php/Other">Other</a></li>
 
     <a href="<?php echo base_url();?>index.php/Basic_Controller/user_profile" aria-expanded="false">

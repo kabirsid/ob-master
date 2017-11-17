@@ -51,7 +51,7 @@ $query = "SELECT * FROM travelling INNER JOIN travelling_img ON travelling.trave
 		              <div class="single-product">
                               <!--  <div class="product-f-image">-->
 
-			                	<img id="postimg" src="<?php echo base_url().$row['path']; ?>" alt="<?php echo $row['title'];?>" data-at2x="<?php $row['path'];?>">
+			                	
 			                <!--	 <div class="product-hover">
                                        
                                         <a href="<?php echo base_url();?>index.php/Travelling/view/<?php echo $row['travelid'];?>" class="view-details-link"><i class="fa fa-link"></i> See details</a>
@@ -63,15 +63,7 @@ $query = "SELECT * FROM travelling INNER JOIN travelling_img ON travelling.trave
 
 			                	<div class="col-md-6" style="text-align: left;">
 			                		<h2><a href="<?php echo base_url();?>index.php/Travelling/view/<?php echo $row['travelid'];?>">
-			                			<?php
-			                			$title = $row['title'];
-			                			if(strlen($title)>30){
-			                				$title = substr($title,0,30)." ...";
-			                				echo $title;
-			                			}else{
-			                				echo $title;
-			                			}
-			                			?>
+			                			
 			                	</a>	</h2>
 			                		
 			                		<i class="fa fa-mobile"></i>&nbsp;&nbsp;&nbsp;&nbsp;: <?php echo $mobile;?><br>

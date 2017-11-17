@@ -13,6 +13,7 @@
 	            	?>	
 		                <?php if($row['type']=='Sell'){?>
 		                <div class="portfolio-box web-design">
+		                	<div class="polaroid">
 		                <?php }else{?>
 		                <div class="portfolio-box print-design">
 		                <?php }?>
@@ -43,6 +44,7 @@
 			                
 			                </div>
 		                </div>
+		            </div>
 	                <?php 
 	                	} 
 	                ?>

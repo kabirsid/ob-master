@@ -14,10 +14,12 @@
 	            	?>	
 		                <?php if($row['type']=='Sell'){?>
 		                <div class="portfolio-box web-design">
+		                	
 		                <?php }else{?>
 		                <div class="portfolio-box print-design">
 		                <?php }?>
-		                	<div class="portfolio-box-container">
+		                <div class="polaroid">
+		                	<div>
 			                	<img id="postimg" src="<?php echo base_url().$row['path']; ?>" alt="<?php echo $row['title'];?>" data-at2x="<?php $row['path'];?>">
 			                	<a href="<?php echo base_url();?>index.php/Automobile/view/<?php echo $row['autoid'];?>">
 			                	<div class="portfolio-box-text">
@@ -36,6 +38,7 @@
 			                	</a>
 			                </div>
 		                </div>
+		            </div>
 	                <?php 
 	                	} 
 	                ?>

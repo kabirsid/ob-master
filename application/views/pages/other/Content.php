@@ -27,6 +27,8 @@ $query = "SELECT * FROM other INNER JOIN other_img ON other.otherid = other_img.
  ?>
 
 
+<div class="container">
+
  <?php foreach($Other->result_array() as $row){
 	            	?>
 
@@ -39,7 +41,7 @@ $query = "SELECT * FROM other INNER JOIN other_img ON other.otherid = other_img.
 	            	<div class="col-md-4">
 
 			                	<img id="postimg" src="<?php echo base_url().$row['path']; ?>" alt="<?php echo $row['title'];?>" data-at2x="<?php $row['path'];?>"> </div>		
-			                	<a href="<?php echo base_url();?>index.php/Other/view/<?php echo $row['otherid'];?>">
+			                	
 			                	<div class="portfolio-box-text">
 			                		<h3><?php
 			                			$title = $row['title'];
@@ -53,8 +55,7 @@ $query = "SELECT * FROM other INNER JOIN other_img ON other.otherid = other_img.
 			                		</h3>
 			                		<p>Address : <?php echo $row['area'].' ,'.$row['city'];?></p>
 			                	</div>
-			                	</a>
-			               <button type="button" data-toggle="modal" data-target="#myModal2">More details..</button> 
+			           			               <button type="button" data-toggle="modal" data-target="#myModal2">More details..</button> 
 		               
 		           </div>
 		       </div>
@@ -102,3 +103,4 @@ $query = "SELECT * FROM other INNER JOIN other_img ON other.otherid = other_img.
     </div>
   </div>
 
+</div>

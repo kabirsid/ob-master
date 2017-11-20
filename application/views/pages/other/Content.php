@@ -1,12 +1,44 @@
-<div class="portfolio-container">
-	        <div class="container">
-	            <div class="row">
-	            	<div class="col-sm-12 portfolio-masonry">
-	            	<?php foreach($Other->result_array() as $row){
-	            	?>	
-		                <div class="portfolio-box web-design">
-		                	<div class="portfolio-box-container">
-			                	<img id="postimg" src="<?php echo base_url().$row['path']; ?>" alt="<?php echo $row['title'];?>" data-at2x="<?php $row['path'];?>">
+ <?php 
+$query = "SELECT * FROM other INNER JOIN other_img ON other.otherid = other_img.otherid GROUP BY other.otherid ORDER BY RAND() LIMIT 4";            
+    $OtherView = $this->db->query($query);
+ ?>
+
+ <?php 
+ 	$pathArray = array();
+ 	foreach ($OtherView->result_array() as $ViewRow) {
+ 		$id = $ViewRow['otherid'];
+ 		$name = $ViewRow['name'];
+ 		$title = $ViewRow['title'];
+ 		$address = $ViewRow['address'];
+ 		$description = $ViewRow['description'];
+ 		$mobile = $ViewRow['mobile'];
+ 		$email = $ViewRow['email'];
+ 		$city = $ViewRow['city'];
+ 		$area = $ViewRow['area'];
+ 		$postdate = strtotime($ViewRow['date']);
+		$postdate = date(' F d, Y | h:i a',$postdate);
+
+		$offerend = $ViewRow['offerend'];
+		$category = $ViewRow['category'];
+		$userid = $ViewRow['userid'];
+		$visits = $ViewRow['visits'];
+ 		array_push($pathArray, $ViewRow['path']);
+ 	}
+ ?>
+
+
+ <?php foreach($Other->result_array() as $row){
+	            	?>
+
+	 
+		     
+	            	<div class="col-md-6" style="margin-top: 20px;">
+	            		
+	            		<div class="panel panel-default">
+                         <div class="panel-body">
+	            	<div class="col-md-4">
+
+			                	<img id="postimg" src="<?php echo base_url().$row['path']; ?>" alt="<?php echo $row['title'];?>" data-at2x="<?php $row['path'];?>"> </div>		
 			                	<a href="<?php echo base_url();?>index.php/Other/view/<?php echo $row['otherid'];?>">
 			                	<div class="portfolio-box-text">
 			                		<h3><?php
@@ -22,14 +54,51 @@
 			                		<p>Address : <?php echo $row['area'].' ,'.$row['city'];?></p>
 			                	</div>
 			                	</a>
-			                </div>
-		                </div>
-	                <?php 
+			               <button type="button" data-toggle="modal" data-target="#myModal2">More details..</button> 
+		               
+		           </div>
+		       </div>
+		   </div>
+		    <?php 
 	                	} 
 	                ?>
-	                </div>
-	            </div>
+	          
 	            <hr>
 	            <?php echo $this->pagination->create_links();?>
-	        </div>
+
+
+
+	  
+
+	  <div class="modal fade" id="myModal2" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+   <h3>Owner: <?php echo $name;?></h3>
         </div>
+        <div class="modal-body">
+        <h3>Description</h3>
+	                    <p>
+	                    	<?php echo $description; ?>
+	                    </p>
+	                    
+	                    <p>
+	                    	
+	                    	<span class="violet"> Address: </span><?php echo ucfirst(strtolower($area)).', ';?><?php echo ucfirst(strtolower($city));?><br>
+	                    	<?php echo $address;?><br>
+	                    	
+
+	                    	
+	                    	<hr>
+	                    	<strong>Posted at: </strong><?php echo $postdate;?>
+	                    </p>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close2</button>
+        </div>
+      </div>
+    </div>
+  </div>
+

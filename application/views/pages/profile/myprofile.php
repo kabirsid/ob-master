@@ -16,7 +16,7 @@
 	<div class="col-md-6" style="margin-top: 60px;">
 		<div class="form-group">
 		  <label for="id">Offers Bull User ID:</label>
-		  <input type="text" class="form-control" id="id" value="<?php echo $row['reg_id']?>" disabled>
+		  <input type="text" class="form-control" id="id" value="" disabled>
 		</div>
 	</div>
 	<div class="col-md-6" style="margin-top: 60px;>

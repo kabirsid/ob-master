@@ -91,16 +91,13 @@
     <a href="<?php echo base_url();?>"><img src="<?php echo base_url();?>assets/img/logo.png"; alt=""></a>
     </div>
     <div class="collapse navbar-collapse" id="navMain">
-    	<?php if(isset($_SESSION['userid']))
-                            {
+    	<?php if(isset($_SESSION['userid'])){
+            $userid=$_SESSION['userid'];
+			$query = "SELECT * FROM register where reg_id=$userid";          
+    		$Register = $this->db->query($query);
+ 		?>
 
-   
- $userid=$_SESSION['userid'];
-$query = "SELECT * FROM register where reg_id=$userid";          
-    $Register = $this->db->query($query);
- 
-
-						?>
+ 		
     
  
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -113,6 +110,7 @@ $query = "SELECT * FROM register where reg_id=$userid";
       </button>
       
     </div>
+
 
     <!-- Collect the nav links, forms, and other content for toggling -->
   
@@ -214,51 +212,104 @@ $query = "SELECT * FROM register where reg_id=$userid";
                     <h4 class="modal-title">ADD Free Post</h4>
                 </div>
                 <div class="modal-body">
-                    
-
-<form name="info_form" class="form-inline" action="<?php echo base_url();?>index.php/Basic_Controller/userinformation" method="post">
-                        <div class="form-group col-sm-6">
-                            <input type="text" class="form-control" name="name" id="name" placeholder="Enter First Name">
-                        </div>
-                        <div class="form-group col-sm-6">
-                            <input type="text" class="form-control" name="name" id="name" placeholder="Enter last Name">
-                        </div>
-                        <div class="form-group col-sm-6">
-                            <input type="email" class="form-control" name="emailid" id="emailid" placeholder="Enter Email">
-                        </div>
-                        
-                        <div class="form-group col-sm-6">
-                            <input type="text" class="form-control" name="phoneno" id="phoneno" placeholder="Enter Phone">
-                        </div>
-                        <div class="form-group col-sm-6">
-                            <input type="text" class="form-control" name="title" id="title" placeholder="Enter Title">
-                        </div>
-                        <div class="col-md-6">
-	<div class="form-group">
-	  
-	  <input type="file" class="form-control" id="image" name="image[]" multiple="multiple" required="required">
+                	<?php 
+	$userid = $_SESSION['userid'];
+	$profile_info = $this->db->get_where('register',array('reg_id'=>$userid))->result_array();
+	foreach ($profile_info as $row){
+?>	
+              
+<form id="profile" method="post" action="<?php echo base_url();?>index.php/Basic_Controller/user_freepost/create">
+		<?php if($this->session->flashdata('message')!=null){?>
+			<div class="col-md-12" id="alert">
+				<div id="danger-alert" class="alert alert-danger"><?php echo $this->session->flashdata('message');?></div>
+			</div>	
+		<?php }?>
+	<div class="col-md-6">
+		<div class="form-group">
+		  <label for="id">Offers Bull User ID:</label>
+		  <input type="text" class="form-control" id="id" value="<?php echo $row['reg_id']?>" disabled>
+		</div>
 	</div>
-</div>
+	<div class="col-md-6">
+		<div class="form-group">
+		  <label for="username">Name:</label>
+		  <input type="text" class="form-control" id="name" name="name" value="<?php echo $row['username']?>">
+		</div>
+	</div>	
+	<div class="col-md-6">
+		<div class="form-group">
+		  <label for="emailid">Email ID:</label>
+		  <input type="email" class="form-control" id="email" name="email" value="<?php echo $row['email']?>">
+		</div>
+	</div>	
+	<div class="col-md-6">
+		<div class="form-group">
+		  <label for="mobile">Mobile No:</label>
+		  <div class="error"><?php echo form_error('mobile'); ?></div>
+		  <input type="text" class="form-control" name="mobile" id="mobile" value="<?php echo $row['mobile']?>" readonly>
+		</div>
+		<span class="error" id="mobile_error"></span>
+	</div>
+	<div class="col-md-6">	
+		<div class="form-group">
+		  <label for="city">Title:</label>
+		  <div class="error"><?php echo form_error('title'); ?></div>
+		  <input type="text" class="form-control" name="title" id="title" value="">
+		  <span class="error" id="title_error"></span>
+		</div>
+	</div>
+	
+	<div class="col-md-6">	
+		<div class="form-group">
+		  <label for="address">Address:</label>
+		  <div class="error"><?php echo form_error('address'); ?></div>
+		  <textarea class="form-control" name="address" id="address"><?php echo $row['address']?></textarea>
+		  <span class="error" id="address_error"></span>
+		</div>
+	</div>
+	<div class="col-md-6">	
+		<div class="form-group">
+		  <label for="city">City:</label>
+		  <div class="error"><?php echo form_error('city'); ?></div>
+		  <input type="text" class="form-control" name="city" id="city" value="<?php echo $row['city']?>">
+		  <span class="error" id="city_error"></span>
+		</div>
+	</div>	
+	<div class="col-md-6">	
+		<div class="form-group">
+		  <label for="city">Image:</label>
+		  <div class="error"><?php echo form_error('image'); ?></div>
+		  <input type="file" class="form-control" name="image[]" id="image" multiple="multiple" required="required">
+		  <span class="error" id="image_error"></span>
+		</div>
+	</div>		
+    <div class="col-md-6">	
+		<div class="form-group">
+		  <label for="city">Description:</label>
+		  <div class="error"><?php echo form_error('description'); ?></div>
+		  <textarea type="file" class="form-control" name="description" id="description" value=""></textarea>
+		  <span class="error" id="description_error"></span>
+		</div>
+	</div>		           
                          
 
                         
                         
 
-                        <div class="form-group col-sm-6">
-                        	<textarea class="form-control" name="discrioption" id="discription" placeholder="Enter Discription"></textarea>
-                        </div>
-                        <div class="form-group col-sm-6">
-                        	<textarea class="form-control" name="address" id="address" placeholder="Enter Address"></textarea>
-                        </div>
-                        <div class="form-group col-sm-6">
-                            <input type="text" class="form-control" name="city" id="city" placeholder="Enter City">
-                        </div>
-
-                    
-                        <div class="form-group col-sm-12">
-                            <button type="submit" class="btn btn-default pull-right">Submit</button>
-                        </div>
-                    </form>
+                       
+	<div class="form-group col-sm-12">
+        <button type="submit" class="btn btn-default pull-right">Submit</button>
+    </div>
+</form>
+		</div>
+	</div>
+</div>
+<?php
+}
+?>
+                       
+                        
+                        
 		
 
                 </div>
@@ -271,8 +322,8 @@ $query = "SELECT * FROM register where reg_id=$userid";
 
 
 						<?php 
-                            }
-                            else{?>
+
+                            }else{?>
             <ul class="nav navbar-nav pull-right">
 				    <li class="active"><a href="<?php echo base_url();?>">Home</a></li>
 				    <li><a href="<?php echo base_url();?>index.php/Hotel">Hotels</a></li>

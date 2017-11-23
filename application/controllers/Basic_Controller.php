@@ -381,6 +381,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					'category_table'=>'other',	
 					'category_img_table'=>'other_img'
 				);
+			}elseif ($path="freepost"){
+				$category_data = array(
+					'category_id' =>'freepost_id',
+					'category_table'=>'freepost',	
+					'category_img_table'=>'freepost_img'
+				);
 			}
 			//IMAGE UPLOAD STARTS HERE 
 			$basepath = "uploads/".$path;
@@ -515,6 +521,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 			redirect(' ','refresh');
 
+		}
+
+
+		/* ************************************************************
+		 * 				FREE POST
+		 *************************************************************/
+		public function user_freepost($task='',$freepost_id=''){
+			if($task=='create'){
+				$userid=$_SESSION['userid'];
+				$this->BasicModel->insert_user_freepost($freepost_id);
+				$this->image_upload('freepost',$userid);
+				$this->session->set_flashdata('message','Data Uploaded Successfully');
+				redirect(base_url().'index.php/Basic_Controller/user_profile');
+			}
 		}
 	}
 ?>

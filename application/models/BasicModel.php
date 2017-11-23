@@ -334,6 +334,27 @@ class BasicModel extends CI_Model{
 		$this->db->where('otherid',$otherid);
 		$this->db->update('other',$data);
 	}
+
+	/* ************************************************************
+	 * 					FREE POST
+	 *************************************************************/
+
+	public function insert_user_freepost($freepost_id){
+		$userid = $_SESSION['userid'];
+		$data['name']=$this->input->post('name');
+		$data['email']=$this->input->post('email');
+		$data['mobile']=$this->input->post('mobile');
+		$data['title']=$this->input->post('title');
+		$data['address']=$this->input->post('address');
+		$data['city']=$this->input->post('city');
+
+		$data['description']=$this->input->post('description');
+		date_default_timezone_set('Asia/Kolkata');
+		$data['date']=date('Y-m-d H:i:s');
+		$data['category']=6;
+		$data['userid']=$userid;
+		$this->db->insert('freepost',$data);
+	}
 	
 	/* ************************************************************
 	 * 					ALL SEARCHES

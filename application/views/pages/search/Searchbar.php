@@ -12,7 +12,7 @@
                                     <input type="text" name="q" placeholder="Search for realestate, homes, flats etc.." class="contact-name" id="contact-name" autocomplete="off">
                                     </div>
                                     <div class="col-md-12 col-xs-12">
-                                    <h2>vinsun</h2>
+                                    
                                         <button type="submit" class="btn">Search</button>
                                     </div>    
                                     </form>

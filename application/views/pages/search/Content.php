@@ -1,14 +1,14 @@
 <div class="portfolio-container">
     <div class="container">
         <div class="row">
-        <h2>Dheeraj</h2>
+       
         	<div class="col-sm-12 portfolio-masonry">
 	            	<?php
 	            		if(isset($realestateResult)){
 	            		foreach($realestateResult as $row){
 	            	?>	
 		                <div class="portfolio-box print-design">
-		                	<div class="portfolio-box-container">
+		                	<div class="polaroid">
 			                	<img id="postimg" src="<?php echo base_url().$row['path']; ?>" alt="<?php echo $row['title'];?>" data-at2x="<?php $row['path'];?>">
 			                	<a href="<?php echo base_url();?>index.php/Realestate/view/<?php echo $row['realid'];?>">
 			                	<div class="portfolio-box-text">
@@ -38,7 +38,7 @@
 	                	foreach($hotelResult as $row){
 	            	?>	
 		                <div class="portfolio-box print-design">
-		                	<div class="portfolio-box-container">
+		                	<div class="polaroid">
 			                	<img id="postimg" src="<?php echo base_url().$row['path']; ?>" alt="<?php echo $row['title'];?>" data-at2x="<?php $row['path'];?>">
 			                	<a href="<?php echo base_url();?>index.php/Hotel/view/<?php echo $row['hotelid'];?>">
 			                	<div class="portfolio-box-text">
@@ -66,7 +66,7 @@
 	                	foreach($tuitionResult as $row){
 	            	?>	
 		                <div class="portfolio-box print-design">
-		                	<div class="portfolio-box-container">
+		                	<div class="polaroid">
 			                	<img id="postimg" src="<?php echo base_url().$row['path']; ?>" alt="<?php echo $row['title'];?>" data-at2x="<?php $row['path'];?>">
 			                	<a href="<?php echo base_url();?>index.php/Tuition/view/<?php echo $row['tutid'];?>">
 			                	<div class="portfolio-box-text">
@@ -96,7 +96,7 @@
 	                	foreach($travellingResult as $row){
 	            	?>	
 		                <div class="portfolio-box print-design">
-		                	<div class="portfolio-box-container">
+		                	<div class="polaroid">
 			                	<img id="postimg" src="<?php echo base_url().$row['path']; ?>" alt="<?php echo $row['title'];?>" data-at2x="<?php $row['path'];?>">
 			                	<a href="<?php echo base_url();?>index.php/Travelling/view/<?php echo $row['travelid'];?>">
 			                	<div class="portfolio-box-text">
@@ -126,7 +126,7 @@
 	                	foreach($automobileResult as $row){
 	            	?>	
 		                <div class="portfolio-box print-design">
-		                	<div class="portfolio-box-container">
+		                	<div class="polaroid">
 			                	<img id="postimg" src="<?php echo base_url().$row['path']; ?>" alt="<?php echo $row['title'];?>" data-at2x="<?php $row['path'];?>">
 			                	<a href="<?php echo base_url();?>index.php/Automobile/view/<?php echo $row['autoid'];?>">
 			                	<div class="portfolio-box-text">
@@ -156,7 +156,7 @@
 	                	foreach($otherResult as $row){
 	            	?>	
 		                <div class="portfolio-box print-design">
-		                	<div class="portfolio-box-container">
+		                	<div class="polaroid">
 			                	<img id="postimg" src="<?php echo base_url().$row['path']; ?>" alt="<?php echo $row['title'];?>" data-at2x="<?php $row['path'];?>">
 			                	<a href="<?php echo base_url();?>index.php/Other/view/<?php echo $row['otherid'];?>">
 			                	<div class="portfolio-box-text">

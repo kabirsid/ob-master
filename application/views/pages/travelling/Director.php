@@ -4,7 +4,7 @@
         <body>
 <?php
         $this->load->view('layout/Nav');
-        $this->load->view('pages/travelling/Searchbar');
+      $this->load->view('pages/travelling/Searchbar');
         $this->load->view('pages/travelling/Content');
         $this->load->view('layout/Footer');
         $this->load->view('layout/Js');

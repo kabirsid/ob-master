@@ -301,6 +301,8 @@ class BasicModel extends CI_Model{
 		$userid = $_SESSION['userid'];
 		$data['name']=$this->input->post('name');
 		$data['title']=$this->input->post('title');
+		$data['type']=$this->input->post('type');
+		$data['price']=$this->input->post('price');
 		$data['address']=$this->input->post('address');
 		$data['description']=$this->input->post('description');
 		$data['mobile']=$this->input->post('mobile');

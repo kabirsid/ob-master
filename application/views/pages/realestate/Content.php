@@ -10,6 +10,7 @@
 	            <div class="row">
 	            	<div class="col-sm-12 col-md-3">
 	            	<div class="col-md-3">
+	            		
 	            	<?php foreach($Realestate->result_array() as $row){
 	            	?>	
 		                <?php if($row['type']=='Sell'){?>

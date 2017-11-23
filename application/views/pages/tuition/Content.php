@@ -4,8 +4,10 @@
 	            	<div class="col-sm-12 portfolio-masonry">
 	            	<?php foreach($Tuition->result_array() as $row){
 	            	?>	
+	            	 
 		                <div class="portfolio-box web-design">
-		                	<div class="portfolio-box-container">
+		                	<div class="polaroid">
+		                	<div >
 			                	<img id="postimg" src="<?php echo base_url().$row['path']; ?>" alt="<?php echo $row['title'];?>" data-at2x="<?php $row['path'];?>">
 			                	<a href="<?php echo base_url();?>index.php/Tuition/view/<?php echo $row['tutid'];?>">
 			                	<div class="portfolio-box-text">
@@ -24,6 +26,7 @@
 			                	</a>
 			                </div>
 		                </div>
+		            </div>
 	                <?php 
 	                	} 
 	                ?>

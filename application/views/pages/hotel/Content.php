@@ -49,7 +49,7 @@
         
 <div class="container">
 <div class="row">
-<div class="col-md-3" style="margin-left: -10%;margin-top: 10px;">
+<!--<div class="col-md-3" style="margin-left: -10%;margin-top: 10px;">
 <input type="checkbox"><label><strong>Option1</strong></label>
 <br>
 <input type="checkbox"><label><strong>Option2</strong></label>
@@ -59,8 +59,8 @@
 <input type="checkbox"><label><strong>Option4</strong></label>
 <br>
 
-</div>
-            </br>   <div class="col-md-9">
+</div>-->
+            </br>   <div class="col-md-12">
                  <?php 
                   $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.hotelid GROUP BY hotel.hotelid ORDER BY RAND() LIMIT 4";			
 	              $Realestate = $this->db->query($query);
@@ -69,7 +69,7 @@
                  <?php foreach ($Realestate->result_array() as $RealestateRow) {
 	            	?>
                  <div class="col-md-3">
-
+                 	 <div class="polaroid">
 	                     <div class="single-product">
                                 <div class="product-f-image">
 	                              <img id="postimg" src="<?php echo $RealestateRow['path'];?>" alt="<?php echo $RealestateRow['title'];?>">
@@ -91,9 +91,16 @@
                                      </div>
                                       <p>Address : <?php echo $RealestateRow['area'].' ,'.$RealestateRow['city'];?></p>
                                     </div>
+                                </div>
                                   <?php } ?>
                            
                            </div>
                       </div>
                       </div>
                       </div>
+
+
+
+
+
+           

@@ -10,7 +10,7 @@ $query = "SELECT * FROM travelling INNER JOIN travelling_img ON travelling.trave
  		$id = $ViewRow['travelid'];
  		$name = $ViewRow['name'];
  		$title = $ViewRow['title'];
- 		$price = $ViewRow['type'];
+ 	
  		$address = $ViewRow['address'];
  		$price = $ViewRow['price'];
  		if($price!=null){
@@ -37,50 +37,38 @@ $query = "SELECT * FROM travelling INNER JOIN travelling_img ON travelling.trave
 
 
 
-<div class="portfolio-container">
-	        <div class="container">
-	            <div class="polariod">
-	            	<div class="col-md-6">
-	            		<div class="panel panel-default">
-                         <div class="panel-body">
-	            	<div class="col-md-4">
+
+	        <div class="container" style="margin-top: 10px;">
+	          
+	          
+	       
+                         
+	            	
 
 	            		
 	            	<?php foreach($Travelling->result_array() as $row){
 	            	?>	
-		              <div class="single-product">
-                              <!--  <div class="product-f-image">-->
-
-			                	<img id="postimg" src="<?php echo base_url().$row['path']; ?>" alt="<?php echo $row['title'];?>" data-at2x="<?php $row['path'];?>">
-			                <!--	 <div class="product-hover">
-                                       
-                                        <a href="<?php echo base_url();?>index.php/Travelling/view/<?php echo $row['travelid'];?>" class="view-details-link"><i class="fa fa-link"></i> See details</a>
-                                    </div>
-                                    </div>-->
-			                	  </div>
+	        
+                  	<div class="col-md-6">
+	           		<div class="panel panel-default">
+	            	<div class="panel-body">
+	            	<div class="col-md-4" style="padding-left: 2px; padding-right: 1px;">
+		           
+                             	<img id="postimg" src="<?php echo base_url().$row['path']; ?>" alt="<?php echo $row['title'];?>" data-at2x="<?php $row['path'];?>">		
+			                	
+			                
 			                  
 			             </div>
 
-			                	<div class="col-md-6" style="text-align: left;">
-			                		<h2><a href="<?php echo base_url();?>index.php/Travelling/view/<?php echo $row['travelid'];?>">
-			                			<?php
-			                			$title = $row['title'];
-			                			if(strlen($title)>30){
-			                				$title = substr($title,0,30)." ...";
-			                				echo $title;
-			                			}else{
-			                				echo $title;
-			                			}
-			                			?>
-			                	</a>	</h2>
+			                	<div class="col-md-5" style="text-align: left; margin-left: 30px;">
 			                		
 			                		<i class="fa fa-mobile"></i>&nbsp;&nbsp;&nbsp;&nbsp;: <?php echo $mobile;?><br>
 	                    	<i class="fa fa-envelope"></i>&nbsp;:<?php echo $email;?><br>
 	                    	<p><i class="fa fa-home"></i>: <?php echo $row['area'].' ,'.$row['city'];?></p>
 			                	</div>
-			                	 </div>
-			                <div class="panel-footer">
-			                	 <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">More Details...</button>
+			                	
+			                
+			               <button type="button" data-toggle="modal" data-target="#myModal1">More details..</button> 
 			                </div>
 			           </div>
 		               </div>
@@ -91,10 +79,8 @@ $query = "SELECT * FROM travelling INNER JOIN travelling_img ON travelling.trave
 	            </div>
 	            
 	            <?php echo $this->pagination->create_links();?>
-	        </div>
-        </div>
-</div>
-  <div class="modal fade" id="myModal" role="dialog">
+
+  <div class="modal fade" id="myModal1" role="dialog">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
@@ -121,8 +107,8 @@ $query = "SELECT * FROM travelling INNER JOIN travelling_img ON travelling.trave
 
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close2</button>
         </div>
       </div>
     </div>
-  </div>
+  

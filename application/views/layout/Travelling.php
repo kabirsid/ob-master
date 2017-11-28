@@ -6,7 +6,7 @@ $query = "SELECT * FROM travelling INNER JOIN travelling_img ON travelling.trave
 	        <div class="container">
 	        	<div class="row">
 		            <div class="col-sm-12 services-title wow fadeIn">
-		                <h2>Travellig</h2>
+		                <h2>Services</h2>
 		            </div>
 	            </div>
 	        </br>
@@ -14,7 +14,7 @@ $query = "SELECT * FROM travelling INNER JOIN travelling_img ON travelling.trave
 	            	<?php foreach ($Realestate->result_array() as $RealestateRow) {
 	            	?>
 			      	<div class="col-xs-12 col-sm-3">
-		                
+		                <div class="polaroid">
                           <div class="single-product">
                                 <div class="product-f-image">
 
@@ -41,6 +41,7 @@ $query = "SELECT * FROM travelling INNER JOIN travelling_img ON travelling.trave
 		                <p>Address : <?php echo $RealestateRow['area'].' ,'.$RealestateRow['city'];?></p>
 		                </a>
 					</div>
+				</div>
 					<?php } ?>
 	            </div>
 	        </div>

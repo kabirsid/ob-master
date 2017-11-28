@@ -1,4 +1,4 @@
- <?php 
+<?php 
 $query = "SELECT * FROM other INNER JOIN other_img ON other.otherid = other_img.otherid GROUP BY other.otherid ORDER BY RAND() LIMIT 4";            
     $OtherView = $this->db->query($query);
  ?>
@@ -25,17 +25,12 @@ $query = "SELECT * FROM other INNER JOIN other_img ON other.otherid = other_img.
  		array_push($pathArray, $ViewRow['path']);
  	}
  ?>
-<<<<<<< HEAD
+
     <div class="container">
 
 	            
 	            	<?php foreach($Other->result_array() as $row){
 	            	?>
-
- 
-	        
-	       
-	            	
 		     
 	            	<div class="col-md-6">
 	            		<div class="panel panel-default">
@@ -43,9 +38,7 @@ $query = "SELECT * FROM other INNER JOIN other_img ON other.otherid = other_img.
 	            	<div class="col-md-4" style="padding-left: 2px; padding-right: 1px;">
 
 			                	<img id="postimg" src="<?php echo base_url().$row['path']; ?>" alt="<?php echo $row['title'];?>" data-at2x="<?php $row['path'];?>"> </div>		
-			                	
-			       
-=======
+			                				       
 
 
 <div class="container">
@@ -64,7 +57,7 @@ $query = "SELECT * FROM other INNER JOIN other_img ON other.otherid = other_img.
 			                	<img id="postimg" src="<?php echo base_url().$row['path']; ?>" alt="<?php echo $row['title'];?>" data-at2x="<?php $row['path'];?>"> </div>		
 			                	
 			                	<div class="portfolio-box-text">
->>>>>>> 0e6ebc3d5b5af710061d4b5bdc0279ad12f9fc7e
+
 			                		<h3><?php
 			                			$title = $row['title'];
 			                			if(strlen($title)>30){
@@ -76,23 +69,22 @@ $query = "SELECT * FROM other INNER JOIN other_img ON other.otherid = other_img.
 			                			?>
 			                		</h3>
 			                		<p>Address : <?php echo $row['area'].' ,'.$row['city'];?></p>
-<<<<<<< HEAD
+
 			           
 			        
 			               <button type="button" data-toggle="modal" data-target="#myModal2">More details..</button> 
 		               </div>
 		           </div>
 		       </div>
-		   
-		
-=======
+		   		
+
 			                	</div>
 			           			               <button type="button" data-toggle="modal" data-target="#myModal2">More details..</button> 
 		               
 		           </div>
 		       </div>
 		   </div>
->>>>>>> 0e6ebc3d5b5af710061d4b5bdc0279ad12f9fc7e
+
 		    <?php 
 	                	} 
 	                ?>
@@ -100,26 +92,22 @@ $query = "SELECT * FROM other INNER JOIN other_img ON other.otherid = other_img.
 	            <hr>
 	            <?php echo $this->pagination->create_links();?>
 
-<<<<<<< HEAD
 	      
-	 
-=======
 
 
-	  
->>>>>>> 0e6ebc3d5b5af710061d4b5bdc0279ad12f9fc7e
 
-	  <div class="modal fade" id="myModal2" role="dialog">
+
+	<div class="modal fade" id="myModal2" role="dialog">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-<<<<<<< HEAD
+
            <?php if( $otherid=$title){
 	            	?>
 
-=======
->>>>>>> 0e6ebc3d5b5af710061d4b5bdc0279ad12f9fc7e
+
+
    <h3>Owner: <?php echo $name;?></h3>
         </div>
         <div class="modal-body">
@@ -138,7 +126,7 @@ $query = "SELECT * FROM other INNER JOIN other_img ON other.otherid = other_img.
 	                    	<hr>
 	                    	<strong>Posted at: </strong><?php echo $postdate;?>
 	                    </p>
-<<<<<<< HEAD
+
 	                       <?php 
 	                	} 
 	                ?>
@@ -146,15 +134,15 @@ $query = "SELECT * FROM other INNER JOIN other_img ON other.otherid = other_img.
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-=======
+
 
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close2</button>
->>>>>>> 0e6ebc3d5b5af710061d4b5bdc0279ad12f9fc7e
+
         </div>
       </div>
     </div>
   </div>
-
+</div>
 </div>

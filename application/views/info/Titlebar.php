@@ -1,6 +1,6 @@
- <div class="page-title-container">
+ <div class="page-title-container" style="margin-top: 70px;">
             <div class="container">
-                <div class="row">
+                <div class="row" >
                     <div class="col-sm-12 wow fadeIn">
                         <h1>
                             <?php if($pagename == "Work.php"){

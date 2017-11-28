@@ -7,11 +7,11 @@
  		$price = $ViewRow['type'];
  		$address = $ViewRow['address'];
  		//$price = $ViewRow['price'];
- 		if($price!=null){
+ 		/*if($price!=null){
  			$price = number_format($price);
  		}else{
  			$price = "NA";
- 		}
+ 		}*/
 
  		$description = $ViewRow['description'];
  		$mobile = $ViewRow['mobile'];

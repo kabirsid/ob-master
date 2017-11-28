@@ -1,7 +1,7 @@
 <div class="portfolio-container">
     <div class="container">
         <div class="row">
-        	<div class="col-sm-12 portfolio-masonry">
+        	<div class="col-sm-12">
 	        		<h3>Our Location : <strong style="color: #ff5722;">Kolhapur</strong>, India</h3>
 	        		<hr>
             </div>

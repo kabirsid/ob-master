@@ -55,10 +55,9 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
         $services = $ViewRow['services'];
         $postdate = strtotime($ViewRow['date']);
         $postdate = date(' F d, Y | h:i a',$postdate);
-
         $offersmenu = $ViewRow['offersmenu'];
         //$offersdescription = $ViewRow['offersdescription'];
-     
+        $offersdiscount=$ViewRow['offersdiscount'];
         $offerend = $ViewRow['offerend'];
         $category = $ViewRow['category'];
         $userid = $ViewRow['userid'];
@@ -108,12 +107,14 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
                 <div class="panel-footer" style="background-color: #808080; margin-left: 0px; margin-bottom: 5px; margin-top:10px;padding: 5px 5px;">
                     <p class="textcent">
                     &nbsp;  &nbsp;  &nbsp;   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fa fa-map-marker" style="font-size:30px;" aria-hidden="true"></i>
-                    &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fa fa-mobile" style="font-size:30px;" aria-hidden="true"></i>
+                    &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fa fa-mobile" style="font-size:30px;" aria-hidden="true"></i>
                     <?php echo $mobile;?>
-                    &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fa fa-envelope" style="font-size:30px;" aria-hidden="true"></i>
+                    &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fa fa-envelope" style="font-size:30px;" aria-hidden="true"></i>
                     <?php echo $email;?>
-                     &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fa fa-eye" style="font-size:30px;" aria-hidden="true"></i>
+                     &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fa fa-eye" style="font-size:30px;" aria-hidden="true"></i>
                     <?php echo $visits;?>
+                    &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <?php echo $offersdiscount?>
                     </p>
                 </div>
             </div>
@@ -130,8 +131,8 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
                 <div class="polaroid" style="width:auto;">
            <!-- <div class="jumbotron" style="background-color: white; border: red;"> -->
                     <div class="panel-default">
-                        <div class="panel-heading">
-                            <h4 style="padding-top: 5px;">Hotels:</h4>
+                        <div class="panel-heading" style="height: 45px;">
+                            <h4 style="padding-top: 0px;">Hotels:</h4>
                         </div>
                         <?php foreach ($Realestate->result_array() as $RealestateRow) {
                         ?>
@@ -169,13 +170,17 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
                 <div class="col-md-12" style="text-align: left; " >
                 <!--    <div class="jumbotron" style="margin-left:-20px;background-color: #ffffff;"> -->
                    <div class="polaroid" style="width:auto; ">
-                    </br>
-                        <h3>Description :</h3>
+                    
+                    <div class="panel-default">
+                        <div class="panel-heading" style="height: 45px;">
+                            <h4>Description:</h4>
+                        </div>
                             <p style="font-size: 16px;">
                                 <?php echo $description; ?>
                             </p>
                     </div>
-                    <hr>  
+                </div>
+                   
                 </div>
                                     
                 <div class="col-md-12">
@@ -193,10 +198,10 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
                             <div class="polaroid" style="width:auto;">
                                 <h3>Posted by : <span class="post_title"><?php echo $name;?></span></h3>
                                 <p style="font-size: 16px;">
-                                <span class="violet"><i class="fa fa-home"></i></span><?php echo ucfirst(strtolower($area)).', ';?><?php echo ucfirst(strtolower($city));?><br>
-                                <?php echo $address;?><br>
-                                <span class="violet"><i class="fa fa-mobile"></i></span><?php echo $mobile;?><br>
-                                <span class="violet"><i class="fa fa-envelope"></i></span><?php echo $email;?><br>
+                                <div class="col-md-6"><i class="fa fa-home"></i></span><?php echo ucfirst(strtolower($area)).', ';?><?php echo ucfirst(strtolower($city));?><br>
+                                <?php echo $address;?><br></div>
+                                <div class="col-md-6"><i class="fa fa-mobile"></i></span><?php echo $mobile;?><br></div>
+                                <span><i class="fa fa-envelope"></i></span><?php echo $email;?><br>
                                 <hr>
                                 <strong>Posted at: </strong><?php echo $postdate;?>
                                 </p>
@@ -225,7 +230,7 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
            
                               <div class="col-md-3">   
                                  <div class="portfolio-box web-design" style="margin-top: 0px;">         
-                  <img style="width:auto;height:auto; padding-bottom: 10px; padding-top: 10px;" src="<?php echo base_url();?><?php echo $pathArray[$i]?>" alt="" data-at2x="<?php echo $pathArray[0];?>">
+                  <img style="width:150px;height:150px; padding-bottom: 10px; padding-top: 10px;" src="<?php echo base_url();?><?php echo $pathArray[$i]?>" alt="" data-at2x="<?php echo $pathArray[0];?>">
                                                 </div>
                                             </div>
                                             <?php }?>
@@ -250,7 +255,7 @@ $query = "SELECT * FROM hotel INNER JOIN hotel_img ON hotel.hotelid = hotel_img.
         
             <div class="col-md-2">
                 <div class="polaroid" style="width:170px;">
-                    <div class="panel panel-default">
+                    <div class="panel-default">
                         <div class="panel-heading">Review
                         </div>
                         <div class="panel-body">

@@ -1,6 +1,5 @@
 
 
-    
 
 
 
@@ -17,32 +16,33 @@
 <body style="background-color: white;">
 
 
- <?php 
-$query = "SELECT realestate.realid, realestate.`name`, realestate.title, realestate.type, realestate.address, realestate.builtup, realestate.price, realestate.description, realestate.mobile, realestate.email, realestate.amenities, realestate.city, realestate.area, realestate.date, realestate.offerend, realestate.category, realestate.userid, real_img.path, real_img.id FROM realestate INNER JOIN real_img ON realestate.realid = real_img.realid GROUP BY realid ORDER BY RAND() LIMIT 4";          
+
+
+
+    <?php 
+$query = "SELECT * FROM travelling INNER JOIN travelling_img ON travelling.travelid = travelling_img.travelid GROUP BY travelling.travelid ORDER BY RAND() LIMIT 4";            
     $Realestate = $this->db->query($query);
  ?>
 
 
-     <?php 
+ <?php 
     $pathArray = array();
-    foreach ($RealestateView as $ViewRow) {
-        $id = $ViewRow['realid'];
+    foreach ($TravellingView as $ViewRow) {
+        $id = $ViewRow['travelid'];
         $name = $ViewRow['name'];
         $title = $ViewRow['title'];
-        $type = $ViewRow['type'];
+        //$price = $ViewRow['type'];
         $address = $ViewRow['address'];
-        $builtup = $ViewRow['builtup'];
-        $price = $ViewRow['price'];
-        if($price!=null){
-            $price = number_format($price);
-        }else{
-            $price = "NA";
-        }
+        //$price = $ViewRow['price'];
+        //if($price!=null){
+            //$price = number_format($price);
+        //}else{
+            //$price = "NA";
+        //}
 
         $description = $ViewRow['description'];
         $mobile = $ViewRow['mobile'];
         $email = $ViewRow['email'];
-        $amenities = $ViewRow['amenities'];
         $city = $ViewRow['city'];
         $area = $ViewRow['area'];
         $postdate = strtotime($ViewRow['date']);
@@ -77,11 +77,11 @@ $query = "SELECT realestate.realid, realestate.`name`, realestate.title, realest
 
 
 
-<div class="col-md-12">
+<div class="col-md-12" >
 
 <div class="container">
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12" >
          <!--  <div class="jumbotron"  style="margin-left:-20px;background-color: #ffffff; padding-left: 0px;padding-bottom: 0px;  0px; padding-top: 0px;"> -->
             <div class="polaroid" style="width:auto;">
             <div class="panel-body" >
@@ -92,12 +92,16 @@ $query = "SELECT realestate.realid, realestate.`name`, realestate.title, realest
                 <img style="opacity:0.9;height:30%;width:100%;" src="<?php echo base_url();?><?php echo $pathArray[$i]?>" alt="<?php echo $pathArray[0];?>"> 
             </div>
         </div>
-         <h3 style="text-align: left;">Posted by : <span class="post_title"><?php echo $name;?></span></h3>
+
+         <h3 style="text-align: left; ">Posted by : <span class="post_title"><?php echo $name;?></span>
+     
+           </h3>
+
             <p style="font-size: 16px;">
-               <!-- <div class="col-sm-1"> 
-               <span class="violet" style="text-align: center;font-size: 18px;"> Address: </span></div>-->
+               <div class="col-sm-1"> 
+               <span class="violet" style="text-align: center;font-size: 18px;"> Address: </span></div>
               <div class="col-sm-4" style="text-align: left;"> 
-               <span style="font-size: 16px; text-align: left;"><?php echo ucfirst(strtolower($area)).', ';?><?php echo ucfirst(strtolower($city));?><br>
+               <span style="font-size: 12px; text-align: left;"><?php echo ucfirst(strtolower($area)).', ';?><?php echo ucfirst(strtolower($city));?><br>
                 <?php echo $address;?><br>
                 
             </p></span></div>
@@ -105,14 +109,13 @@ $query = "SELECT realestate.realid, realestate.`name`, realestate.title, realest
     <div class="panel-footer" style="background-color: #808080; margin-left: 0px; margin-bottom: 5px; margin-top:10px;padding: 5px 5px;">
         
                 <p class="textcent">
-                   &nbsp;  &nbsp;  &nbsp;   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fa fa-map-marker" style="font-size:30px;" aria-hidden="true"></i>
-                      &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fa fa-mobile" style="font-size:30px;" aria-hidden="true"></i>
+<i class="fa fa-map-marker" style="font-size:30px;" aria-hidden="true"></i>
+                     <i class="fa fa-mobile" style="font-size:30px; text-align:left;" aria-hidden="true"></i>
                         <?php echo $mobile;?>
-                    &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fa fa-envelope" style="font-size:30px;" aria-hidden="true"></i>
+                     <i class="fa fa-envelope" style="font-size:30px;" aria-hidden="true"></i>
                         <?php echo $email;?>
-                   &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fa fa-eye" style="font-size:30px;" aria-hidden="true"></i>
-                <?php echo $visits;?>
 
+  
     
   
                 </p>
@@ -126,23 +129,24 @@ $query = "SELECT realestate.realid, realestate.`name`, realestate.title, realest
    </div>
     </div>
 </div>
-</div>
+</div> 
+
 <div class="single-product-area">
     <div class="zigzag-bottom"></div>
     <div class="container">
-        <div class="row">
+        <div class="row"> 
             <div class="col-md-2">
-                <div class="polaroid" style="width:auto;">
+                <div class="polaroid" style="width:auto; ">
            <!-- <div class="jumbotron" style="background-color: white; border: red;"> -->
             <div class="panel-default">
                 <div class="panel-heading">
-            <h4 style="padding-top: 5px;">Realestate:</h4></div>
+            <h4 style="padding-top: 5px;">Services:</h4></div>
                     <?php foreach ($Realestate->result_array() as $RealestateRow) {
                     ?>
                     
                             <div class="panel-body">
                                 <h4>
-                                    <a href="<?php echo base_url();?>index.php/Realestate/view/<?php echo $RealestateRow['realid'];?>">
+                                    <a href="<?php echo base_url();?>index.php/Travelling/view/<?php echo $RealestateRow['travelid'];?>">
                                         <?php
                                         $title = $RealestateRow['title'];
                                         if(strlen($title)>30){
@@ -156,22 +160,21 @@ $query = "SELECT realestate.realid, realestate.`name`, realestate.title, realest
                                    
                                     </a>
                                      </h4>
+                                     <hr>
                                  </div>
                                </li>
 
                         </ul>
                         <div>
                             <?php } ?>
-                          <a href="<?php echo base_url();?>index.php/Realestate"><h4>More...</h4></a>
+                          <a href="<?php echo base_url();?>index.php/Travelelling"><h4>More...</h4></a>
                         </div>
                     </div>
-                     <!--   </div>-->
-                </div>
+                            </div>
                 </div>
             </div>
            </div> 
-        
-</div>
+    
 
        
 
@@ -191,13 +194,14 @@ $query = "SELECT realestate.realid, realestate.`name`, realestate.title, realest
                         <hr>  
                         
                 </div>
+            </div>
                                     
                 <div class="col-md-12">
                     <div role="tabpanel">
                         <ul class="product-tab" role="tablist">
                             
-                            <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Services</a></li>
-                            <li role="presentation"><a href="#menu" aria-controls="menu" role="tab" data-toggle="tab">Menu</a></li>
+                            <!--<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Services</a></li>
+                            <li role="presentation"><a href="#menu" aria-controls="menu" role="tab" data-toggle="tab">Menu</a></li>,-->
                             <li role="presentation"><a href="#gallery" aria-controls="gallery" role="tab" data-toggle="tab">Gallery</a></li>
                       <li role="presentation"><a href="#address" aria-controls="address" role="tab" data-toggle="tab">Address</a></li>
                         </ul>
@@ -284,15 +288,10 @@ $query = "SELECT realestate.realid, realestate.`name`, realestate.title, realest
     </div>
     </div>
     </div>
-        
+        </div>
     </div>
-</div> 
-</div>
+    </div>
 
-</div>
-</form>
-</div>
-    
     <!-- Latest jQuery form server -->
     <script src="https://code.jquery.com/jquery.min.js"></script>
     

@@ -1,114 +1,79 @@
-
- <?php 
-$query = "SELECT * FROM travelling INNER JOIN travelling_img ON travelling.travelid = travelling_img.travelid GROUP BY travelling.travelid ORDER BY RAND() LIMIT 4";            
-    $Realestate = $this->db->query($query);
- ?>
-
-<?php 
- 	$pathArray = array();
- 	foreach ($Realestate->result_array() as $ViewRow) {
- 		$id = $ViewRow['travelid'];
- 		$name = $ViewRow['name'];
- 		$title = $ViewRow['title'];
- 	
- 		$address = $ViewRow['address'];
- 		$price = $ViewRow['price'];
- 		if($price!=null){
- 			$price = number_format($price);
- 		}else{
- 			$price = "NA";
- 		}
-
- 		$description = $ViewRow['description'];
- 		$mobile = $ViewRow['mobile'];
- 		$email = $ViewRow['email'];
- 		$city = $ViewRow['city'];
- 		$area = $ViewRow['area'];
- 		$postdate = strtotime($ViewRow['date']);
-		$postdate = date(' F d, Y | h:i a',$postdate);
-
-		$offerend = $ViewRow['offerend'];
-		$category = $ViewRow['category'];
-		$userid = $ViewRow['userid'];
-		$visits = $ViewRow['visits'];
- 		array_push($pathArray, $ViewRow['path']);
- 	}
- ?>
-
-
-
-
-	        <div class="container" style="margin-top: 10px;">
-	          
-	          
-	       
-                         
-	            	
-
-	            		
+<!-- <div class="portfolio-container">
+	        <div class="container">
+	            <div class="row">
+	            	<div class="col-sm-12 portfolio-masonry">
 	            	<?php foreach($Travelling->result_array() as $row){
 	            	?>	
-	        
-                  	<div class="col-md-6">
-	           		<div class="panel panel-default">
-	            	<div class="panel-body">
-	            	<div class="col-md-4" style="padding-left: 2px; padding-right: 1px;">
-		           
-                             	<img id="postimg" src="<?php echo base_url().$row['path']; ?>" alt="<?php echo $row['title'];?>" data-at2x="<?php $row['path'];?>">		
-			                	
-			                
-			                  
-			             </div>
-
-			                	<div class="col-md-5" style="text-align: left; margin-left: 30px;">
-			                		
-			                		<i class="fa fa-mobile"></i>&nbsp;&nbsp;&nbsp;&nbsp;: <?php echo $mobile;?><br>
-	                    	<i class="fa fa-envelope"></i>&nbsp;:<?php echo $email;?><br>
-	                    	<p><i class="fa fa-home"></i>: <?php echo $row['area'].' ,'.$row['city'];?></p>
+		                <div class="portfolio-box web-design">
+		                	<div class="portfolio-box-container">
+			                	<img id="postimg" src="<?php echo base_url().$row['path']; ?>" alt="<?php echo $row['title'];?>" data-at2x="<?php $row['path'];?>">
+			                	<a href="<?php echo base_url();?>index.php/Travelling/view/<?php echo $row['travelid'];?>">
+			                	<div class="portfolio-box-text">
+			                		<h3><?php
+			                			$title = $row['title'];
+			                			if(strlen($title)>30){
+			                				$title = substr($title,0,30)." ...";
+			                				echo $title;
+			                			}else{
+			                				echo $title;
+			                			}
+			                			?>
+			                		</h3>
+			                		<p>Address : <?php echo $row['area'].' ,'.$row['city'];?></p>
 			                	</div>
-			                	
-			                
-			               <button type="button" data-toggle="modal" data-target="#myModal1">More details..</button> 
+			                	</a>
 			                </div>
-			           </div>
-		               </div>
+		                </div>
 	                <?php 
 	                	} 
 	                ?>
-	              
+	                </div>
 	            </div>
-	            
+	            <hr>
 	            <?php echo $this->pagination->create_links();?>
+	        </div>
+        </div> -->
 
-  <div class="modal fade" id="myModal1" role="dialog">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-   <h3>Owner: <?php echo $name;?></h3>
-        </div>
-        <div class="modal-body">
-        <h3>Description</h3>
-	                    <p>
-	                    	<?php echo $description; ?>
-	                    </p>
-	                    
-	                    <p>
-	                    	
-	                    	<span class="violet"> Address: </span><?php echo ucfirst(strtolower($area)).', ';?><?php echo ucfirst(strtolower($city));?><br>
-	                    	<?php echo $address;?><br>
-	                    	<?php if($price!=null){?>
-	                    	<span class="violet">Price: </span><?php echo $price;?><br>
-	                    	<?php }?>
-	                    	
-	                    	<hr>
-	                    	<strong>Posted at: </strong><?php echo $postdate;?>
-	                    </p>
 
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close2</button>
-        </div>
-      </div>
-    </div>
-  
+
+<div class="container">
+<div class="row">
+
+            </br>   <div class="col-md-12">
+                 <?php 
+                  $query = "SELECT * FROM travelling INNER JOIN travelling_img ON travelling.travelid = travelling_img.travelid GROUP BY travelling.travelid ORDER BY RAND() LIMIT 4";			
+	              $Realestate = $this->db->query($query);
+                    ?>
+
+                 <?php foreach ($Realestate->result_array() as $RealestateRow) {
+	            	?>
+                 <div class="col-md-3">
+                 	 <div class="polaroid">
+	                     <div class="single-product">
+                                <div class="product-f-image">
+	                              <img id="postimg" src="<?php echo base_url().$RealestateRow['path']; ?>" alt="<?php echo $RealestateRow['title'];?>">
+			                	<div class="product-hover">
+                                         <a href="<?php echo base_url();?>index.php/Travelling/view/<?php echo $RealestateRow['travelid'];?>" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                    </div>
+                                     </div>
+                                           <h2><a href="<?php echo base_url();?>index.php/Realestate/view/<?php echo $RealestateRow['travelid'];?>">
+                                           	<?php
+	                                       	$title = $RealestateRow['title'];
+		                                 	 if(strlen($title)>30){
+		                             	    $title = substr($title,0,30)." ...";
+		                             	 		echo $title;
+		                              		}else{
+			                                  echo $title;
+			                                }
+	                                       	?>       
+                                          </a></h2>
+                                     </div>
+                                      <p>Address : <?php echo $RealestateRow['area'].' ,'.$RealestateRow['city'];?></p>
+                                    </div>
+                                </div>
+                                  <?php } ?>
+                           
+                           </div>
+                      </div>
+                      </div>
+                      </div>

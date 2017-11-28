@@ -1,7 +1,7 @@
 <div class="portfolio-container">
     <div class="container">
         <div class="row">
-        	<div class="col-sm-12 portfolio-masonry">
+        	<div class="col-sm-12 ">
 	        	<h3>We perform both roles by providing <strong>best deals</strong> to you as well as by <strong>helping your buisness</strong> to grow</h3>
             </div>
             <div>
